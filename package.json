@@ -2,13 +2,13 @@
   "name": "bb26",
   "version": "0.0.0",
   "description": "Bijective base-26 utility functions",
-  "repository": "github:ptrkcsk/bb26",
+  "repository": "github:ptrkcsk/BB26",
   "author": "Patrik Csak <patrik@csak.email>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ptrkcsk/bb26/issues"
+    "url": "https://github.com/ptrkcsk/BB26/issues"
   },
-  "homepage": "https://github.com/ptrkcsk/bb26#readme",
+  "homepage": "https://github.com/ptrkcsk/BB26#readme",
   "devDependencies": {
     "@types/jest": "^24.0.15",
     "jest": "^24.8.0",
