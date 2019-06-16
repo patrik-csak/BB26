@@ -9,10 +9,26 @@
     "url": "https://github.com/ptrkcsk/BB26/issues"
   },
   "homepage": "https://github.com/ptrkcsk/BB26#readme",
+  "keywords": [
+    "base-26",
+    "bijective-base-26",
+    "hexavigesimal",
+    "spreadsheet"
+  ],
+  "main": "dist",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
   "devDependencies": {
+    "@sindresorhus/tsconfig": "^0.4.0",
     "@types/jest": "^24.0.15",
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.2"
-  }
+  },
+  "types": "dist"
 }

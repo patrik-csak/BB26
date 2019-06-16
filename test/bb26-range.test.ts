@@ -1,4 +1,4 @@
-import bb26Range from './bb26-range'
+import bb26Range from '../source/bb26-range'
 
 describe('bb26Range', () => {
   test('Should work with end', () => {

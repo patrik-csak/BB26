@@ -1,10 +1,7 @@
 {
   "compilerOptions": {
-    "lib": [
-      "es2015"
-    ]
+    "outDir": "dist"
   },
-  "exclude": [
-    "**/*.test.ts"
-  ]
+  "include": ["source"],
+  "extends": "@sindresorhus/tsconfig"
 }
