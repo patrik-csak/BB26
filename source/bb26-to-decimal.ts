@@ -7,8 +7,8 @@ export default function bb26ToDecimal (string: string): number {
 
   let number: number = 0
 
-  for (let i = string.length - 1; i >= 0; i--) {
-    const letter = string[i]
+  for (let i = 0; i < string.length; i++) {
+    const letter = string[string.length - i - 1]
 
     number += Math.pow(26, i) * letterToDecimal(letter)
   }

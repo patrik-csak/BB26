@@ -16,4 +16,12 @@ describe('decimalToBb26', () => {
   test('Should convert 27 to AA', () => {
     expect(decimalToBb26(27)).toBe('AA')
   })
+
+  test('Should convert 28 to AB', () => {
+    expect(decimalToBb26(28)).toBe('AB')
+  })
+
+  test('Should convert 29 to AC', () => {
+    expect(decimalToBb26(29)).toBe('AC')
+  })
 })

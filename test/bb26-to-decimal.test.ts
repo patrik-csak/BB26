@@ -17,6 +17,14 @@ describe('bb26ToDecimal', () => {
     expect(bb26ToDecimal('AA')).toBe(27)
   })
 
+  test('Should convert AB to 28', () => {
+    expect(bb26ToDecimal('AB')).toBe(28)
+  })
+
+  test('Should convert AC to 29', () => {
+    expect(bb26ToDecimal('AC')).toBe(29)
+  })
+
   test('Should throw if given a non-upper-case character', () => {
     expect(() => {
       bb26ToDecimal('a')
