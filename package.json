@@ -21,6 +21,7 @@
   ],
   "scripts": {
     "build": "tsc",
+    "docs": "typedoc",
     "test": "jest"
   },
   "devDependencies": {

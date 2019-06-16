@@ -1,3 +1,4 @@
+/** @ignore */
 const letterToDecimal = (letter: string) =>
   letter.charCodeAt(0) - 'A'.charCodeAt(0) + 1
 

@@ -1,3 +1,4 @@
+/** @ignore */
 const decimalToLetter = (number: number) =>
   String.fromCharCode('A'.charCodeAt(0) - 1 + number)
 
