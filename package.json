@@ -22,7 +22,8 @@
   "scripts": {
     "build": "tsc",
     "docs": "typedoc",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "devDependencies": {
     "@sindresorhus/tsconfig": "^0.4.0",
