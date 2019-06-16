@@ -1,3 +1,6 @@
 {
-  "out": "docs"
+  "mode": "file",
+  "name": "BB26",
+  "out": "docs",
+  "theme": "minimal"
 }

@@ -28,4 +28,8 @@ describe('bb26Increment', () => {
   it('Should increment AAB to AAC', () => {
     expect(bb26Increment('AAB')).toBe('AAC')
   })
+
+  it('Should throw if passed non-bijective base-26 string', () => {
+    expect(() => bb26Increment('abc123')).toThrow()
+  })
 })

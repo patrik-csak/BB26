@@ -23,10 +23,10 @@ function bb26Range (start: string, end: string): string[]
  * ```
  * import { bb26Range } from 'bb26'
  *
- * bb26Range('B') // ['A']
- * bb26Range('C') // ['A', 'B']
- * bb26Range('B', 'C') // ['B']
- * bb26Range('B', 'D') // ['B', 'C']
+ * bb26Range('B')       // ['A']
+ * bb26Range('C')       // ['A', 'B']
+ * bb26Range('B', 'C')  // ['B']
+ * bb26Range('B', 'D')  // ['B', 'C']
  * bb26Range('Z', 'AC') // ['Z', 'AA', 'AB']
  * ```
  *
