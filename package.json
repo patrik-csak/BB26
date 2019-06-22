@@ -23,6 +23,7 @@
   "scripts": {
     "build": "tsc",
     "docs": "typedoc",
+    "prepublishOnly": "npm run build",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
