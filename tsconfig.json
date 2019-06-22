@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
+    "esModuleInterop": true,
     "outDir": "dist"
   },
-  "include": ["source"],
-  "extends": "@sindresorhus/tsconfig"
+  "extends": "@sindresorhus/tsconfig",
+  "include": ["source"]
 }
