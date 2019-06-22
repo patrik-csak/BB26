@@ -1,6 +1,6 @@
 {
   "name": "bb26",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Bijective base-26 utility functions",
   "repository": "github:ptrkcsk/BB26",
   "author": "Patrik Csak <patrik@csak.email>",
@@ -23,6 +23,7 @@
   "scripts": {
     "build": "tsc",
     "docs": "typedoc",
+    "prepublishOnly": "npm run build",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
