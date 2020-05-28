@@ -3,6 +3,7 @@
     "esModuleInterop": true,
     "outDir": "dist"
   },
+  "exclude": ["source/**/*.test.ts"],
   "extends": "@sindresorhus/tsconfig",
   "include": ["source"]
 }
