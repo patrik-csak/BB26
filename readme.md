@@ -16,4 +16,4 @@ npm install bb26
 
 ## Usage
 
-[API documentation](https://ptrkcsk.github.io/BB26/)
+[API documentation](https://bb26.js.org/)
