@@ -1,12 +1,12 @@
-import { bb26Random, bb26Range } from './index'
+import { random, range } from './index'
 
-describe('bb26Random', () => {
+describe('random', () => {
   describe('Given an upper bound', () => {
     test('Should return a valid random string', () => {
-      const validLetters = bb26Range('AAA')
+      const validLetters = range('AAA')
       const results = []
 
-      for (let i = 0; i < 1000; ++i) results.push(bb26Random('ZZ'))
+      for (let i = 0; i < 1000; ++i) results.push(random('ZZ'))
 
       for (const result of results) expect(validLetters).toContain(result)
     })
@@ -14,10 +14,10 @@ describe('bb26Random', () => {
 
   describe('Given an upper and lower bound', () => {
     test('Should return a valid random string', () => {
-      const validLetters = bb26Range('AA', 'AAA')
+      const validLetters = range('AA', 'AAA')
       const results = []
 
-      for (let i = 0; i < 1000; ++i) results.push(bb26Random('AA', 'ZZ'))
+      for (let i = 0; i < 1000; ++i) results.push(random('AA', 'ZZ'))
 
       for (const result of results) expect(validLetters).toContain(result)
     })

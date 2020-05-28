@@ -1,33 +1,33 @@
-import bb26ToDecimal from './bb26-to-decimal'
+import toDecimal from './to-decimal'
 
-describe('bb26ToDecimal', () => {
+describe('toDecimal', () => {
   test('Should convert A to 1', () => {
-    expect(bb26ToDecimal('A')).toBe(1)
+    expect(toDecimal('A')).toBe(1)
   })
 
   test('Should convert B to 2', () => {
-    expect(bb26ToDecimal('B')).toBe(2)
+    expect(toDecimal('B')).toBe(2)
   })
 
   test('Should convert Z to 26', () => {
-    expect(bb26ToDecimal('Z')).toBe(26)
+    expect(toDecimal('Z')).toBe(26)
   })
 
   test('Should convert AA to 27', () => {
-    expect(bb26ToDecimal('AA')).toBe(27)
+    expect(toDecimal('AA')).toBe(27)
   })
 
   test('Should convert AB to 28', () => {
-    expect(bb26ToDecimal('AB')).toBe(28)
+    expect(toDecimal('AB')).toBe(28)
   })
 
   test('Should convert AC to 29', () => {
-    expect(bb26ToDecimal('AC')).toBe(29)
+    expect(toDecimal('AC')).toBe(29)
   })
 
   test('Should throw if given a non-upper-case character', () => {
     expect(() => {
-      bb26ToDecimal('a')
+      toDecimal('a')
     }).toThrow()
   })
 })

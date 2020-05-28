@@ -1,8 +1,8 @@
-import range from './bb26-range'
+import range from './range'
 import sample from './sample'
 
-function bb26Random (upper: string): string
-function bb26Random (lower: string, upper: string): string
+function random (upper: string): string
+function random (lower: string, upper: string): string
 
 /**
  * Produces a random string between the inclusive `lower` and `upper` bounds. If
@@ -10,21 +10,21 @@ function bb26Random (lower: string, upper: string): string
  * returned.
  *
  * ```
- * import { bb26Random } from 'bb26'
+ * import { random } from 'bb26'
  *
- * bb26Random('AAA')         // 'NE'
- * bb26Random('AAA', 'AAAA') // 'KXZ'
+ * random('AAA')         // 'NE'
+ * random('AAA', 'AAAA') // 'KXZ'
  * ```
  *
  * @param lower
  * @param upper
  * @returns Random string
  */
-function bb26Random (lower: string, upper?: string): string {
+function random (lower: string, upper?: string): string {
   const start = upper ? lower : 'A'
   const end = upper || lower
 
   return sample(range(start, end))
 }
 
-export default bb26Random
+export default random

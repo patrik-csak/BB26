@@ -1,5 +1,5 @@
 /** @ignore */
-function toDecimal (letter: string) {
+function charToDecimal (letter: string) {
   return letter.charCodeAt(0) - 'A'.charCodeAt(0) + 1
 }
 
@@ -7,18 +7,18 @@ function toDecimal (letter: string) {
  * Converts a bijective base-26 string to a decimal number.
  *
  * ```
- * import { bb26ToDecimal } from 'bb26'
+ * import { toDecimal } from 'bb26'
  *
- * bb26ToDecimal('A')  // 1
- * bb26ToDecimal('B')  // 2
- * bb26ToDecimal('Z')  // 26
- * bb26ToDecimal('AA') // 27
- * bb26ToDecimal('AB') // 28
+ * toDecimal('A')  // 1
+ * toDecimal('B')  // 2
+ * toDecimal('Z')  // 26
+ * toDecimal('AA') // 27
+ * toDecimal('AB') // 28
  * ```
  *
  * @param string
  */
-export default function bb26ToDecimal (string: string): number {
+export default function toDecimal (string: string): number {
   if (!/[A-Z]/.test(string)) {
     throw new Error('String must contain only upper-case characters')
   }
@@ -28,7 +28,7 @@ export default function bb26ToDecimal (string: string): number {
   for (let i = 0; i < string.length; i++) {
     const char = string[string.length - i - 1]
 
-    number += Math.pow(26, i) * toDecimal(char)
+    number += Math.pow(26, i) * charToDecimal(char)
   }
 
   return number
