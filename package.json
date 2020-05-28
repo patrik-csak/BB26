@@ -22,6 +22,7 @@
   ],
   "scripts": {
     "build": "tsc",
+    "lint": "eslint",
     "docs": "typedoc && git restore docs/CNAME",
     "prepublishOnly": "npm run build",
     "test": "jest",
