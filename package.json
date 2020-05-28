@@ -27,9 +27,6 @@
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
-  "dependencies": {
-    "lodash.sample": "^4.2.1"
-  },
   "devDependencies": {
     "@sindresorhus/tsconfig": "^0.7.0",
     "@types/jest": "^25.2.3",
