@@ -1,5 +1,5 @@
-import bb26Range from './bb26-range'
-import sample from "./sample";
+import range from './bb26-range'
+import sample from './sample'
 
 function bb26Random (upper: string): string
 function bb26Random (lower: string, upper: string): string
@@ -24,7 +24,7 @@ function bb26Random (lower: string, upper?: string): string {
   const start = upper ? lower : 'A'
   const end = upper || lower
 
-  return sample(bb26Range(start, end))
+  return sample(range(start, end))
 }
 
 export default bb26Random

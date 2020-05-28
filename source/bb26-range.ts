@@ -1,15 +1,5 @@
-import bb26ToDecimal from './bb26-to-decimal'
-import decimalToBb26 from './decimal-to-bb26'
-
-/**
- * @ignore
- */
-const increment = (string: string) => decimalToBb26(bb26ToDecimal(string) + 1)
-
-/**
- * @ignore
- */
-const lessThan = (a: string, b: string) => bb26ToDecimal(a) < bb26ToDecimal(b)
+import toDecimal from './bb26-to-decimal'
+import increment from './bb26-increment'
 
 function bb26Range (end: string): string[]
 function bb26Range (start: string, end: string): string[]
@@ -34,17 +24,15 @@ function bb26Range (start: string, end: string): string[]
  * @param end - The end of the range
  */
 function bb26Range (start: string, end?: string): string[] {
-  let array: string[] = []
+  let range: string[] = []
   const _end = end || start
   const _start = end ? start : 'A'
 
-  for (
-    let i = _start;
-    lessThan(i, _end);
-    i = increment(i)
-  ) array.push(i)
+  for (let i = _start; toDecimal(i) < toDecimal(_end); i = increment(i)) {
+    range.push(i)
+  }
 
-  return array
+  return range
 }
 
 export default bb26Range
