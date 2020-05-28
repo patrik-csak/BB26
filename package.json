@@ -22,7 +22,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "docs": "typedoc",
+    "docs": "typedoc && git restore docs/CNAME",
     "prepublishOnly": "npm run build",
     "test": "jest",
     "test:coverage": "jest --coverage"
