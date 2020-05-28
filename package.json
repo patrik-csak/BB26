@@ -31,12 +31,12 @@
     "lodash.sample": "^4.2.1"
   },
   "devDependencies": {
-    "@sindresorhus/tsconfig": "^0.4.0",
-    "@types/jest": "^24.9.1",
+    "@sindresorhus/tsconfig": "^0.7.0",
+    "@types/jest": "^25.2.3",
     "@types/lodash.sample": "^4.2.6",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.3.0",
-    "typedoc": "^0.14.2",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0",
+    "typedoc": "^0.17.7",
     "typescript": "^3.9.3"
   },
   "types": "dist"
