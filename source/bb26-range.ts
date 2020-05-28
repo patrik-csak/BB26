@@ -24,7 +24,7 @@ function bb26Range (start: string, end: string): string[]
  * @param end - The end of the range
  */
 function bb26Range (start: string, end?: string): string[] {
-  let range: string[] = []
+  const range: string[] = []
   const _end = end || start
   const _start = end ? start : 'A'
 

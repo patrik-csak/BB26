@@ -15,6 +15,6 @@ import toDecimal from './bb26-to-decimal'
  * @param string - String to increment
  * @return Incremented string
  */
-export default function bb26Increment (string: string) {
+export default function bb26Increment (string: string): string {
   return toBb26(toDecimal(string) + 1)
 }

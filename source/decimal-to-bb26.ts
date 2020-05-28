@@ -18,7 +18,7 @@ function toChar (number: number) {
  *
  * @param number
  */
-export default function decimalToBb26 (number: number) {
+export default function decimalToBb26 (number: number): string {
   let string = ''
   let _number = number
 
