@@ -1,4 +1,4 @@
-import { bb26Random, bb26Range } from '../source'
+import { bb26Random, bb26Range } from './index'
 
 describe('bb26Random', () => {
   describe('Given an upper bound', () => {

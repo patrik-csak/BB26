@@ -1,4 +1,4 @@
-import decimalToBb26 from '../source/decimal-to-bb26'
+import decimalToBb26 from './decimal-to-bb26'
 
 describe('decimalToBb26', () => {
   test('Should convert 1 to A', () => {

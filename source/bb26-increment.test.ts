@@ -1,4 +1,4 @@
-import bb26Increment from '../source/bb26-increment'
+import bb26Increment from './bb26-increment'
 
 describe('bb26Increment', () => {
   it('Should increment A to B', () => {
