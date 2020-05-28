@@ -8,8 +8,8 @@
 
 ## Installation
 
-```bash
-npm i bb26
+```sh
+npm install bb26
 ```
 
 ---
