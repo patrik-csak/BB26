@@ -1,4 +1,3 @@
-/** @ignore */
 function charToDecimal (letter: string) {
   return letter.charCodeAt(0) - 'A'.charCodeAt(0) + 1
 }
