@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function sample(array: any[]): any {
+export default function sample<T>(array: T[]): T {
   return array[Math.floor(Math.random() * array.length)];
 }
