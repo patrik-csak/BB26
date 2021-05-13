@@ -1,6 +1,6 @@
 {
   "name": "bb26",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Bijective base-26 utility functions for converting numbers to/from spreadsheet column letters",
   "repository": "github:ptrkcsk/BB26",
   "author": "Patrik Csak <p@trikcsak.com>",
