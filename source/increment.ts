@@ -1,5 +1,5 @@
-import toBb26 from './to-bb26'
-import toDecimal from './to-decimal'
+import toBb26 from './to-bb26';
+import toDecimal from './to-decimal';
 
 /**
  * Increments a bijective base-26 string by one numeral.
@@ -15,6 +15,6 @@ import toDecimal from './to-decimal'
  * @param string - String to increment
  * @return Incremented string
  */
-export default function increment (string: string): string {
-  return toBb26(toDecimal(string) + 1)
+export default function increment(string: string): string {
+	return toBb26(toDecimal(string) + 1);
 }

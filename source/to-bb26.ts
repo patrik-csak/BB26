@@ -1,5 +1,5 @@
-function toChar (number: number) {
-  return String.fromCharCode('A'.charCodeAt(0) - 1 + number)
+function toChar(number: number) {
+	return String.fromCharCode('A'.charCodeAt(0) - 1 + number);
 }
 
 /**
@@ -17,14 +17,14 @@ function toChar (number: number) {
  *
  * @param number
  */
-export default function toBb26 (number: number): string {
-  let string = ''
-  let _number = number
+export default function toBb26(number: number): string {
+	let string = '';
+	let _number = number;
 
-  while (_number > 0) {
-    string = toChar(_number % 26 || 26) + string
-    _number = Math.floor((_number - 1) / 26)
-  }
+	while (_number > 0) {
+		string = toChar(_number % 26 || 26) + string;
+		_number = Math.floor((_number - 1) / 26);
+	}
 
-  return string
+	return string;
 }

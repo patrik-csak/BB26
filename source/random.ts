@@ -1,8 +1,5 @@
-import range from './range'
-import sample from './sample'
-
-function random (upper: string): string
-function random (lower: string, upper: string): string
+import range from './range';
+import sample from './sample';
 
 /**
  * Produces a random string between the inclusive `lower` and `upper` bounds. If
@@ -20,11 +17,9 @@ function random (lower: string, upper: string): string
  * @param upper
  * @returns Random string
  */
-function random (lower: string, upper?: string): string {
-  const start = upper ? lower : 'A'
-  const end = upper || lower
+export default function random(lower: string, upper?: string): string {
+	const start = upper ? lower : 'A';
+	const end = upper ?? lower;
 
-  return sample(range(start, end))
+	return sample(range(start, end));
 }
-
-export default random

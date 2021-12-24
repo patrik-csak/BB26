@@ -1,5 +1,5 @@
-function charToDecimal (letter: string) {
-  return letter.charCodeAt(0) - 'A'.charCodeAt(0) + 1
+function charToDecimal(letter: string) {
+	return letter.charCodeAt(0) - 'A'.charCodeAt(0) + 1;
 }
 
 /**
@@ -17,18 +17,18 @@ function charToDecimal (letter: string) {
  *
  * @param string
  */
-export default function toDecimal (string: string): number {
-  if (!/[A-Z]/.test(string)) {
-    throw new Error('String must contain only upper-case characters')
-  }
+export default function toDecimal(string: string): number {
+	if (!/[A-Z]/.test(string)) {
+		throw new Error('String must contain only upper-case characters');
+	}
 
-  let number = 0
+	let number = 0;
 
-  for (let i = 0; i < string.length; i++) {
-    const char = string[string.length - i - 1]
+	for (let i = 0; i < string.length; i++) {
+		const char = string[string.length - i - 1];
 
-    number += Math.pow(26, i) * charToDecimal(char)
-  }
+		number += 26 ** i * charToDecimal(char);
+	}
 
-  return number
+	return number;
 }
