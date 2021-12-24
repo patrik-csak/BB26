@@ -1,5 +1,10 @@
+/* eslint-disable @typescript-eslint/unified-signatures, no-redeclare */
+
 import randomItem from 'random-item';
 import range from './range';
+
+export default function random(upper: string): string;
+export default function random(lower: string, upper: string): string;
 
 /**
  * Produces a random string between the inclusive `lower` and `upper` bounds. If

@@ -1,5 +1,10 @@
+/* eslint-disable @typescript-eslint/unified-signatures, no-redeclare */
+
 import toDecimal from './to-decimal';
 import increment from './increment';
+
+export default function range(end: string): string[];
+export default function range(start: string, end: string): string[];
 
 /**
  * Creates an array of bijective base-26 numerals progressing from `start` up
