@@ -25,17 +25,17 @@
     "build": "tsc",
     "format": "xo --fix",
     "prepare": "del-cli dist && npm run build",
-    "test": "xo && jest",
-    "test:coverage": "xo && jest --coverage"
+    "test": "xo && ava",
+    "test:coverage": "xo && c8 ava"
   },
   "dependencies": {
     "random-item": "^3.1.0"
   },
   "devDependencies": {
-    "@types/jest": "^27.0.2",
+    "ava": "^3.15.0",
+    "c8": "^7.10.0",
     "del-cli": "^4.0.1",
-    "jest": "^27.0.6",
-    "ts-jest": "^27.0.3",
+    "ts-node": "^10.4.0",
     "typescript": "^4.0.5",
     "xo": "^0.39.1"
   },

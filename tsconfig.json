@@ -5,6 +5,5 @@
     "strict": true,
     "target": "ES5"
   },
-  "exclude": ["source/**/*.test.ts"],
-  "include": ["source"]
+  "include": ["source/*"]
 }
