@@ -1,4 +1,4 @@
-import * as randomItem from 'random-item';
+import randomItem from 'random-item';
 import range from './range';
 
 /**
