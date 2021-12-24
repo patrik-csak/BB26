@@ -28,6 +28,9 @@
     "test": "xo && jest",
     "test:coverage": "xo && jest --coverage"
   },
+  "dependencies": {
+    "random-item": "^3.1.0"
+  },
   "devDependencies": {
     "@types/jest": "^27.0.2",
     "del-cli": "^4.0.1",

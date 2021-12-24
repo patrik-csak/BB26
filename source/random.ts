@@ -1,5 +1,5 @@
+import * as randomItem from 'random-item';
 import range from './range';
-import sample from './sample';
 
 /**
  * Produces a random string between the inclusive `lower` and `upper` bounds. If
@@ -21,5 +21,5 @@ export default function random(lower: string, upper?: string): string {
 	const start = upper ? lower : 'A';
 	const end = upper ?? lower;
 
-	return sample(range(start, end));
+	return randomItem(range(start, end));
 }
