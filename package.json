@@ -26,7 +26,8 @@
     "format": "xo --fix",
     "prepare": "del-cli dist && npm run build",
     "test": "xo && ava",
-    "test:coverage": "xo && c8 ava"
+    "test:coverage": "del-cli coverage && xo && c8 ava",
+    "test:coverage:lcov": "del-cli coverage && xo && c8 --reporter=lcovonly ava"
   },
   "dependencies": {
     "random-item": "^3.1.0"
