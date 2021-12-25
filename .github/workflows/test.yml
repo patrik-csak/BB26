@@ -1,7 +1,7 @@
 on: push
 jobs:
   test:
-    name: Node.js ${{matrix.node-version}} on ${{matrix.os}}
+    name: Node.js v${{matrix.node-version}} on ${{matrix.os}}
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
