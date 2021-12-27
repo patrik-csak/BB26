@@ -35,7 +35,7 @@ random(upper: string): string
 random(lower: string, upper: string): string
 ```
 
-Produces a random string between the inclusive lower and upper bounds. If only one argument is provided, a string between 'A' and the given string is returned.
+Produces a random string between the inclusive `lower` and `upper` bounds. If only one argument is provided, a string between `'A'` and the given string is returned.
 
 ```js
 import { random } from 'bb26'
@@ -51,9 +51,7 @@ range(end: string): string[]
 range(start: string, end: string): string[]
 ```
 
-Creates an array of bijective base-26 numerals progressing from start up to, but not including, end.
-
-If end is not specified, it's set to start with start then set to 'A'.
+Creates an array of bijective base-26 numerals progressing from `start` up to, but not including, `end`. If `end` is not specified, it's set to `start` with `start` then set to `'A'`.
 
 ```js
 import { range } from 'bb26'
