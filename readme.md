@@ -6,7 +6,7 @@ BB26 is a JavaScript library for working with [bijective base-26](https://en.wik
 
 ## What is bijective base-26 numeration?
 
-You're probably familiar with BB26 numeration, even if you didn't know that's what it was called. BB26 numbers are used in spreadsheet columns, license plate serials, and (probably?) more.
+You're probably familiar with BB26 numeration. It's used for spreadsheet columns, license plate serials, and (probably?) more.
 
 Here's an example of decimal (base-10) numbers (the numbers you use every day to count things) compared to their corresponding BB26 numbers:
 
