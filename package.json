@@ -1,7 +1,7 @@
 {
   "name": "bb26",
   "version": "2.2.0",
-  "description": "Bijective base-26 utility functions for converting numbers to/from spreadsheet column letters",
+  "description": "Utilities for working with bijective base-26 numerals",
   "repository": "github:ptrkcsk/BB26",
   "author": "Patrik Csak <p@trikcsak.com>",
   "license": "MIT",
@@ -15,7 +15,8 @@
     "hexavigesimal",
     "spreadsheet",
     "spreadsheet column",
-    "spreadsheet column letters"
+    "spreadsheet column letters",
+    "license plate serials"
   ],
   "main": "dist",
   "files": [

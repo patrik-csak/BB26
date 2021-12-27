@@ -2,7 +2,18 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c56701b3968f3de65188/test_coverage)](https://codeclimate.com/github/ptrkcsk/BB26/test_coverage) [![Maintainability](https://api.codeclimate.com/v1/badges/c56701b3968f3de65188/maintainability)](https://codeclimate.com/github/ptrkcsk/BB26/maintainability) [![BB26 minified and gzipped size](https://badgen.net/bundlephobia/minzip/bb26)](https://bundlephobia.com/result?p=bb26)
 
-JavaScript [bijective base-26](https://en.wikipedia.org/wiki/Bijective_numeration#The_bijective_base-26_system) utility functions for converting numbers to/from spreadsheet column letters
+BB26 is a JavaScript library for working with [bijective base-26](https://en.wikipedia.org/wiki/Bijective_numeration#The_bijective_base-26_system) (BB26) numbers
+
+## What is bijective base-26 numeration?
+
+You're probably familiar with BB26 numeration, even if you didn't know that's what it was called. BB26 numbers are used in spreadsheet columns, license plate serials, and (probably?) more.
+
+Here's an example of decimal (base-10) numbers (the numbers you use every day to count things) compared to their corresponding BB26 numbers:
+
+```
+Decimal: | 1 | 2 | 3 | ... | 24 | 25 | 26 | 27 | 28 | 29 | ...
+   BB26: | A | B | C | ... |  X |  Y |  Z | AA | AB | AC | ...
+```
 
 ## Installation
 
