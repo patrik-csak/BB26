@@ -1,6 +1,6 @@
 # BB26
 
-[![BB26 minified and gzipped size](https://badgen.net/bundlephobia/minzip/bb26)](https://bundlephobia.com/result?p=bb26) [![BB26 downloads per month on npm](https://badgen.net/npm/dw/bb26)](https://badgen.net/npm/dw/bb26) [![Test Coverage](https://api.codeclimate.com/v1/badges/c56701b3968f3de65188/test_coverage)](https://codeclimate.com/github/ptrkcsk/BB26/test_coverage)
+[![BB26 minified and gzipped size](https://badgen.net/bundlephobia/minzip/bb26)](https://bundlephobia.com/result?p=bb26) [![BB26 downloads per month on npm](https://badgen.net/npm/dw/bb26)](https://www.npmjs.com/package/bb26) [![Test Coverage](https://api.codeclimate.com/v1/badges/c56701b3968f3de65188/test_coverage)](https://codeclimate.com/github/ptrkcsk/BB26/test_coverage)
 
 BB26 is a JavaScript library for working with [bijective base-26](https://en.wikipedia.org/wiki/Bijective_numeration#The_bijective_base-26_system) (BB26) numbers
 
