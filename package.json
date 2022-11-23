@@ -2,13 +2,6 @@
   "name": "bb26",
   "version": "2.2.0",
   "description": "Utilities for working with bijective base-26 numerals",
-  "repository": "github:ptrkcsk/BB26",
-  "author": "Patrik Csak <p@trikcsak.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ptrkcsk/BB26/issues"
-  },
-  "homepage": "https://github.com/ptrkcsk/BB26#readme",
   "keywords": [
     "base 26",
     "bijective base 26",
@@ -18,10 +11,17 @@
     "spreadsheet column letters",
     "license plate serials"
   ],
-  "main": "dist",
+  "homepage": "https://github.com/ptrkcsk/BB26#readme",
+  "bugs": {
+    "url": "https://github.com/ptrkcsk/BB26/issues"
+  },
+  "license": "MIT",
+  "author": "Patrik Csak <p@trikcsak.com>",
   "files": [
     "dist"
   ],
+  "main": "dist",
+  "repository": "github:ptrkcsk/BB26",
   "scripts": {
     "build": "tsc",
     "format": "xo --fix",
