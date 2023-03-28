@@ -1,7 +1,5 @@
-import increment from './increment';
-import random from './random';
-import range from './range';
-import toBb26 from './to-bb26';
-import toDecimal from './to-decimal';
-
-export {increment, random, range, toBb26, toDecimal};
+export {default as increment} from './increment.js';
+export {default as range} from './range.js';
+export {default as random} from './random.js';
+export {default as toBb26} from './to-bb26.js';
+export {default as toDecimal} from './to-decimal.js';

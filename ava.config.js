@@ -1,6 +1,8 @@
 const config = {
-	extensions: ['ts'],
-	require: ['ts-node/register']
+	extensions: {
+		ts: 'module',
+	},
+	nodeArguments: ['--loader=ts-node/esm'],
 };
 
 export default config;

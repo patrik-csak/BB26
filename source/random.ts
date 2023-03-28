@@ -1,7 +1,7 @@
-/* eslint-disable @typescript-eslint/unified-signatures, no-redeclare */
+/* eslint-disable @typescript-eslint/unified-signatures */
 
 import randomItem from 'random-item';
-import range from './range';
+import {range} from './index.js';
 
 export default function random(upper: string): string;
 export default function random(lower: string, upper: string): string;

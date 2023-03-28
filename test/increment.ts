@@ -1,5 +1,5 @@
 import test from 'ava';
-import increment from '../source/increment';
+import {increment} from '../source/index.js';
 
 type TestCase = {
 	from: string;
@@ -13,7 +13,7 @@ const testCases: TestCase[] = [
 	{from: 'AA', to: 'AB'},
 	{from: 'AB', to: 'AC'},
 	{from: 'AAA', to: 'AAB'},
-	{from: 'AAB', to: 'AAC'}
+	{from: 'AAB', to: 'AAC'},
 ];
 
 for (const {from, to} of testCases) {

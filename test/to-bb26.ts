@@ -1,5 +1,5 @@
 import test from 'ava';
-import toBb26 from '../source/to-bb26';
+import {toBb26} from '../source/index.js';
 
 type TestCase = {
 	from: number;
@@ -12,7 +12,7 @@ const testCases: TestCase[] = [
 	{from: 26, to: 'Z'},
 	{from: 27, to: 'AA'},
 	{from: 28, to: 'AB'},
-	{from: 29, to: 'AC'}
+	{from: 29, to: 'AC'},
 ];
 
 for (const {from, to} of testCases) {

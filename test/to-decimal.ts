@@ -1,5 +1,5 @@
 import test from 'ava';
-import toDecimal from '../source/to-decimal';
+import {toDecimal} from '../source/index.js';
 
 type TestCase = {
 	from: string;
@@ -12,7 +12,7 @@ const testCases: TestCase[] = [
 	{from: 'Z', to: 26},
 	{from: 'AA', to: 27},
 	{from: 'AB', to: 28},
-	{from: 'AC', to: 29}
+	{from: 'AC', to: 29},
 ];
 
 for (const {from, to} of testCases) {

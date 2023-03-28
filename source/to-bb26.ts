@@ -1,5 +1,5 @@
 function toChar(number: number) {
-	return String.fromCharCode('A'.charCodeAt(0) - 1 + number);
+	return String.fromCodePoint('A'.codePointAt(0)! - 1 + number);
 }
 
 /**

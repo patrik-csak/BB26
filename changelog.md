@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Convert BB26 to a pure ECMAScript module (ESM). Please read Sindre Sorhus’s [Pure ESM Package](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) article
+- Update dependencies
 - Improve documentation
 
 ## [2.2.1](https://github.com/ptrkcsk/BB26/compare/v2.2.0...v2.2.1) – 2022-11-22

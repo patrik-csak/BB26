@@ -1,5 +1,5 @@
 import test from 'ava';
-import {random, range} from '../source';
+import {random, range} from '../source/index.js';
 
 test('returns a valid string given only an upper bound', (t) => {
 	const validLetters = range('AAA');

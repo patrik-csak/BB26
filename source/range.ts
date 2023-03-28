@@ -1,7 +1,6 @@
-/* eslint-disable @typescript-eslint/unified-signatures, no-redeclare */
+/* eslint-disable @typescript-eslint/unified-signatures */
 
-import toDecimal from './to-decimal';
-import increment from './increment';
+import {toDecimal, increment} from './index.js';
 
 export default function range(end: string): string[];
 export default function range(start: string, end: string): string[];

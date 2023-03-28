@@ -1,5 +1,5 @@
 import test from 'ava';
-import range from '../source/range';
+import {range} from '../source/index.js';
 
 test('works with end', (t) => {
 	t.deepEqual(range('A'), []);

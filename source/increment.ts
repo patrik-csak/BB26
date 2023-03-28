@@ -1,5 +1,4 @@
-import toBb26 from './to-bb26';
-import toDecimal from './to-decimal';
+import {toBb26, toDecimal} from './index.js';
 
 /**
  * Increments a bijective base-26 string by one numeral.
