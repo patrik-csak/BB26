@@ -8,24 +8,24 @@ BB26 is a JavaScript library for working with [bijective base-26](https://en.wik
 
 ## What is bijective base-26 numeration?
 
-You're probably familiar with BB26 numeration. It's used for spreadsheet columns, license plate serials, and (probably?) more.
+You’re probably familiar with BB26 numeration. It’s used for spreadsheet columns, license plate serials, and (probably?) more.
 
-Here's an example of decimal (base-10) numbers (the numbers you use every day to count things) compared to their corresponding BB26 numbers:
+Here’s an example of decimal (base-10) numbers (the numbers you use every day to count things) compared to their corresponding BB26 numbers:
 
 ```
 Decimal: | 1 | 2 | 3 | ... | 24 | 25 | 26 | 27 | 28 | 29 | ...
    BB26: | A | B | C | ... |  X |  Y |  Z | AA | AB | AC | ...
 ```
 
-## Installation
+## Install
 
 ```sh
 npm install bb26
 ```
 
-## Usage
+## API
 
-### Increment
+### `increment()`
 
 ```
 increment(string: string): string
@@ -41,7 +41,7 @@ increment('Z')  // 'AA'
 increment('AA') // 'AB'
 ```
 
-### Random
+### `random()`
 
 ```
 random(upper: string): string
@@ -57,7 +57,7 @@ random('AAA')         // 'NE'
 random('AAA', 'AAAA') // 'KXZ'
 ```
 
-### Range
+### `range()`
 
 ```
 range(end: string): string[]
@@ -76,7 +76,7 @@ range('B', 'D')  // ['B', 'C']
 range('Z', 'AC') // ['Z', 'AA', 'AB']
 ```
 
-### Convert from decimal to BB26
+### `toBb26()`
 
 ```
 toBb26(number: number): string
@@ -94,7 +94,7 @@ toBb26(27) // 'AA'
 toBb26(28) // 'AB'
 ```
 
-### Convert from BB26 to decimal
+### `toDecimal()`
 
 ```
 toDecimal(string: string): number
