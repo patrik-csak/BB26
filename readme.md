@@ -1,6 +1,5 @@
 # BB26
 
-[![Badge indicating minified and gzipped size of BB26](https://badgen.net/bundlephobia/minzip/bb26)](https://bundlephobia.com/result?p=bb26)
 [![Badge indicating number of weekly downloads of BB26 from npm package registry](https://badgen.net/npm/dw/bb26)](https://www.npmjs.com/package/bb26)
 [![Badge indicating percent test coverage of BB26](https://badgen.net/codeclimate/coverage/patrik-csak/BB26?label=test+coverage)](https://codeclimate.com/github/patrik-csak/BB26/test_coverage)
 
