@@ -18,6 +18,9 @@ Decimal: | 1 | 2 | 3 | ... | 24 | 25 | 26 | 27 | 28 | 29 | ...
 
 ## Install
 
+> **Note**
+> This package is a native ECMAScript Module (ESM). If your project is not ESM, read [Sindre Sorhus’s Pure ESM package article](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
+
 ```sh
 npm install bb26
 ```
