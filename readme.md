@@ -19,7 +19,8 @@ Decimal: | 1 | 2 | 3 | ... | 24 | 25 | 26 | 27 | 28 | 29 | ...
 ## Install
 
 > **Note**
-> This package is a native ECMAScript Module (ESM). If your project is not ESM, read [Sindre Sorhus’s Pure ESM package article](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
+>
+> This package is a native ECMAScript Module (ESM). If your project is not ESM, read [Sindre Sorhus’s Pure ESM package article](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
 
 ```sh
 npm install bb26
@@ -46,8 +47,8 @@ increment("AA"); // 'AB'
 ### `random()`
 
 ```ts
-function random(upper: string): string
-function random(lower: string, upper: string): string
+function random(upper: string): string;
+function random(lower: string, upper: string): string;
 ```
 
 Produces a random string between the inclusive `lower` and `upper` bounds. If only one argument is provided, a string between `'A'` and the given string is returned.
@@ -62,8 +63,8 @@ random("AAA", "AAAA"); // 'KXZ'
 ### `range()`
 
 ```ts
-function range(end: string): string[]
-function range(start: string, end: string): string[]
+function range(end: string): string[];
+function range(start: string, end: string): string[];
 ```
 
 Creates an array of bijective base-26 numerals progressing from `start` up to, but not including, `end`. If `end` is not specified, it's set to `start` with `start` then set to `'A'`.
