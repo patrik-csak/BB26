@@ -11,16 +11,16 @@
     "spreadsheet column letters",
     "license plate serials"
   ],
-  "homepage": "https://github.com/ptrkcsk/BB26#readme",
+  "homepage": "https://github.com/patrik-csak/BB26#readme",
   "bugs": {
-    "url": "https://github.com/ptrkcsk/BB26/issues"
+    "url": "https://github.com/patrik-csak/BB26/issues"
   },
   "license": "MIT",
   "author": "Patrik Csak <p@trikcsak.com>",
   "files": [
     "dist"
   ],
-  "repository": "github:ptrkcsk/BB26",
+  "repository": "github:patrik-csak/BB26",
   "scripts": {
     "build": "del-cli dist && tsc",
     "format": "xo --fix",
