@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/unified-signatures */
-
 import randomItem from 'random-item';
 import {range} from './index.js';
 

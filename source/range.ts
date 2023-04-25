@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/unified-signatures */
-
 import {toDecimal, increment} from './index.js';
 
 export default function range(end: string): string[];
