@@ -42,7 +42,7 @@
     "xo": "^0.54.1"
   },
   "engines": {
-    "node": ">=14 <=19"
+    "node": ">=16 <=19"
   },
   "exports": "./dist/index.js",
   "type": "module"
