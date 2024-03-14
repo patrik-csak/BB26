@@ -45,5 +45,6 @@
     "node": ">=16 <=19"
   },
   "exports": "./dist/index.js",
-  "type": "module"
+  "type": "module",
+  "funding": "https://buymeacoffee.com/patrikcsak"
 }
