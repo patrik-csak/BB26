@@ -11,21 +11,20 @@
     "spreadsheet column letters",
     "license plate serials"
   ],
-  "homepage": "https://github.com/patrik-csak/BB26#readme",
-  "bugs": {
-    "url": "https://github.com/patrik-csak/BB26/issues"
-  },
+  "repository": "github:patrik-csak/BB26",
+  "funding": "https://buymeacoffee.com/patrikcsak",
   "license": "MIT",
-  "author": "Patrik Csak <p@trikcsak.com>",
+  "author": "Patrik Csak <p@trikcsak.com> (https://patrikcsak.com)",
+  "type": "module",
+  "exports": "./dist/index.js",
   "files": [
     "dist"
   ],
-  "repository": "github:patrik-csak/BB26",
   "scripts": {
     "build": "del-cli dist && tsc",
-    "format": "xo --fix",
+    "format": "xo --fix && sort-package-json",
     "prepare": "npm run build",
-    "test": "xo && ava",
+    "test": "xo && sort-package-json --check && ava",
     "test:coverage": "del-cli coverage && xo && c8 ava",
     "test:coverage:lcov": "del-cli coverage && xo && c8 --reporter=lcovonly ava"
   },
@@ -37,14 +36,12 @@
     "ava": "^5.2.0",
     "c8": "^7.10.0",
     "del-cli": "^5.0.0",
+    "sort-package-json": "^2.8.0",
     "ts-node": "^10.4.0",
     "typescript": "^5.0.2",
     "xo": "^0.54.1"
   },
   "engines": {
     "node": ">=16 <=19"
-  },
-  "exports": "./dist/index.js",
-  "type": "module",
-  "funding": "https://buymeacoffee.com/patrikcsak"
+  }
 }
