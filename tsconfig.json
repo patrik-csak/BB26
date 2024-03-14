@@ -1,7 +1,6 @@
 {
   "extends": "@sindresorhus/tsconfig",
   "compilerOptions": {
-    "declaration": true,
     "outDir": "dist",
   },
   "include": ["source"]
