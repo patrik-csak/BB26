@@ -7,22 +7,22 @@ BB26 is a JavaScript library for working with [bijective base-26](https://en.wik
 
 ## What is bijective base-26 numeration?
 
-You’re probably familiar with BB26 numeration. It’s used for spreadsheet columns, license plate serials, and (probably?) more.
+You’re probably familiar with BB26 numeration. It’s used for spreadsheet columns, license plate serials, and (probably?) more
 
 Here’s an example of decimal (base-10) numbers (the numbers you use every day to count things) compared to their corresponding BB26 numbers:
 
 ```
-Decimal: | 1 | 2 | 3 | ... | 24 | 25 | 26 | 27 | 28 | 29 | ...
-   BB26: | A | B | C | ... |  X |  Y |  Z | AA | AB | AC | ...
+Decimal: | 1 | 2 | 3 | … | 24 | 25 | 26 | 27 | 28 | 29 | …
+   BB26: | A | B | C | … |  X |  Y |  Z | AA | AB | AC | …
 ```
 
 ## Install
 
-> **Note**
+> [!IMPORTANT]
 >
-> This package is a native ECMAScript Module (ESM). If your project is not ESM, read [Sindre Sorhus’s Pure ESM package article](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
+> This package is a native ECMAScript Module (ESM). If your project is not ESM, read [Sindre Sorhus’s **Pure ESM package** article](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
 
-```sh
+```shell
 npm install bb26
 ```
 
@@ -30,13 +30,13 @@ npm install bb26
 
 ### `increment()`
 
-```ts
+```typescript
 function increment(string: string): string;
 ```
 
-Increments a bijective base-26 string by one numeral.
+Increments a bijective base-26 string by one numeral
 
-```js
+```javascript
 import { increment } from "bb26";
 
 increment("A");  // 'B'
@@ -46,14 +46,14 @@ increment("AA"); // 'AB'
 
 ### `random()`
 
-```ts
+```typescript
 function random(upper: string): string;
 function random(lower: string, upper: string): string;
 ```
 
 Produces a random string between the inclusive `lower` and `upper` bounds. If only one argument is provided, a string between `'A'` and the given string is returned.
 
-```js
+```javascript
 import { random } from "bb26";
 
 random("AAA");         // 'NE'
@@ -62,14 +62,14 @@ random("AAA", "AAAA"); // 'KXZ'
 
 ### `range()`
 
-```ts
+```typescript
 function range(end: string): string[];
 function range(start: string, end: string): string[];
 ```
 
 Creates an array of bijective base-26 numerals progressing from `start` up to, but not including, `end`. If `end` is not specified, it's set to `start` with `start` then set to `'A'`.
 
-```js
+```javascript
 import { range } from "bb26";
 
 range("B");       // ['A']
@@ -81,13 +81,13 @@ range("Z", "AC"); // ['Z', 'AA', 'AB']
 
 ### `toBb26()`
 
-```ts
+```typescript
 function toBb26(number: number): string;
 ```
 
-Converts a decimal number to a bijective base-26 string.
+Converts a decimal number to a bijective base-26 string
 
-```js
+```javascript
 import { toBb26 } from "bb26";
 
 toBb26(1);  // 'A'
@@ -99,13 +99,13 @@ toBb26(28); // 'AB'
 
 ### `toDecimal()`
 
-```ts
+```typescript
 function toDecimal(string: string): number;
 ```
 
-Converts a bijective base-26 string to a decimal number.
+Converts a bijective base-26 string to a decimal number
 
-```js
+```javascript
 import { toDecimal } from "bb26";
 
 toDecimal("A");  // 1
