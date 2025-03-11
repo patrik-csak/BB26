@@ -16,12 +16,12 @@
   "license": "MIT",
   "author": "Patrik Csak <p@trikcsak.com> (https://patrikcsak.com)",
   "type": "module",
-  "exports": "./dist/index.js",
+  "exports": "./distribution/index.js",
   "files": [
-    "dist"
+    "distribution"
   ],
   "scripts": {
-    "build": "del-cli dist && tsc",
+    "build": "del-cli distribution && tsc",
     "format": "xo --fix && sort-package-json",
     "prepare": "npm run build",
     "test": "xo && sort-package-json --check && ava",
@@ -32,7 +32,7 @@
     "random-item": "^4.0.1"
   },
   "devDependencies": {
-    "@sindresorhus/tsconfig": "^5.0.0",
+    "@sindresorhus/tsconfig": "^7.0.0",
     "ava": "^6.1.2",
     "c8": "^9.1.0",
     "del-cli": "^5.0.0",
