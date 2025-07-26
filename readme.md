@@ -1,8 +1,5 @@
 # BB26
 
-[![Badge indicating number of weekly downloads of BB26 from npm package registry](https://badgen.net/npm/dw/bb26)](https://www.npmjs.com/package/bb26)
-[![Badge indicating percent test coverage of BB26](https://badgen.net/codeclimate/coverage/patrik-csak/BB26?label=test+coverage)](https://codeclimate.com/github/patrik-csak/BB26/test_coverage)
-
 BB26 is a JavaScript library for working with [bijective base-26](https://en.wikipedia.org/wiki/Bijective_numeration#The_bijective_base-26_system) (BB26) numbers
 
 ## What is bijective base-26 numeration?

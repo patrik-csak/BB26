@@ -28,8 +28,7 @@
     "format": "eslint --fix && prettier --write . && sort-package-json",
     "prepare": "npm run build",
     "test": "eslint && prettier --check . && sort-package-json --check && ava",
-    "test:coverage": "del-cli coverage && eslint && prettier --check . && sort-package-json --check && c8 ava",
-    "test:coverage:lcov": "del-cli coverage && eslint && prettier --check . && sort-package-json --check && c8 --reporter=lcovonly ava"
+    "test:coverage": "del-cli coverage && eslint && prettier --check . && sort-package-json --check && c8 ava"
   },
   "dependencies": {
     "random-item": "^4.0.1"
