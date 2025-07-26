@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **BREAKING**: Require Node.js v20
 
+### Fixed
+
+- Circular imports
+
 ## [4.0.0](https://github.com/patrik-csak/BB26/compare/v3.0.2...v4.0.0) – 2023-05-24
 
 ### Removed

@@ -1,4 +1,5 @@
-import {toDecimal, increment} from './index.js';
+import increment from './increment.js';
+import toDecimal from './to-decimal.js';
 
 export default function range(end: string): string[];
 export default function range(start: string, end: string): string[];

@@ -1,5 +1,5 @@
 import randomItem from 'random-item';
-import {range} from './index.js';
+import range from './range.js';
 
 export default function random(upper: string): string;
 export default function random(lower: string, upper: string): string;
