@@ -9,16 +9,6 @@ export default function range(start: string, end: string): string[];
  *
  * If `end` is not specified, it's set to `start` with `start` then set to `'A'`.
  *
- * ```
- * import { range } from 'bb26'
- *
- * range('B')       // ['A']
- * range('C')       // ['A', 'B']
- * range('B', 'C')  // ['B']
- * range('B', 'D')  // ['B', 'C']
- * range('Z', 'AC') // ['Z', 'AA', 'AB']
- * ```
- *
  * @param start - The start of the range
  * @param end - The end of the range
  */

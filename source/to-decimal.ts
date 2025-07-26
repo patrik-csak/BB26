@@ -5,16 +5,6 @@ function charToDecimal(letter: string) {
 /**
  * Converts a bijective base-26 string to a decimal number.
  *
- * ```
- * import { toDecimal } from 'bb26'
- *
- * toDecimal('A')  // 1
- * toDecimal('B')  // 2
- * toDecimal('Z')  // 26
- * toDecimal('AA') // 27
- * toDecimal('AB') // 28
- * ```
- *
  * @param string
  */
 export default function toDecimal(string: string): number {

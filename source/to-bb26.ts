@@ -5,16 +5,6 @@ function toChar(number: number) {
 /**
  * Converts a decimal number to a bijective base-26 string.
  *
- * ```
- * import { toBb26 } from 'bb26'
- *
- * toBb26(1)  // 'A'
- * toBb26(2)  // 'B'
- * toBb26(26) // 'Z'
- * toBb26(27) // 'AA'
- * toBb26(28) // 'AB'
- * ```
- *
  * @param number
  */
 export default function toBb26(number: number): string {
