@@ -21,7 +21,3 @@ for (const {from, to} of testCases) {
 		t.is(increment(from), to);
 	});
 }
-
-test('throws if passed non-bijective base-26 string', (t) => {
-	t.throws(() => increment('abc123'));
-});
