@@ -1,5 +1,6 @@
-import randomItem from 'random-item';
-import range from './range.js';
+import randomInteger from 'random-int';
+import toBb26 from './to-bb26.js';
+import toDecimal from './to-decimal.js';
 
 export default function random(upper: string): string;
 export default function random(lower: string, upper: string): string;
@@ -14,8 +15,11 @@ export default function random(lower: string, upper: string): string;
  * @returns Random string
  */
 export default function random(lower: string, upper?: string): string {
-	const start = upper ? lower : 'A';
-	const end = upper ?? lower;
+	const lowerDecimal = upper === undefined ? 1 : toDecimal(lower);
+	const upperDecimal =
+		upper === undefined ? toDecimal(lower) : toDecimal(upper);
 
-	return randomItem(range(start, end));
+	const integer = randomInteger(lowerDecimal, upperDecimal);
+
+	return toBb26(integer);
 }

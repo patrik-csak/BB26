@@ -31,7 +31,7 @@
     "test:coverage": "del-cli coverage && eslint && prettier --check . && sort-package-json --check && c8 ava"
   },
   "dependencies": {
-    "random-item": "^4.0.1"
+    "random-int": "^3.0.0"
   },
   "devDependencies": {
     "@ava/typescript": "^6.0.0",
