@@ -1,8 +1,11 @@
 const config = {
-	extensions: {
-		ts: 'module',
+	typescript: {
+		compile: 'tsc',
+		rewritePaths: {
+			'source/': 'distribution/source/',
+			'test/': 'distribution/test/',
+		},
 	},
-	nodeArguments: ['--import=tsimp'],
 };
 
 export default config;
