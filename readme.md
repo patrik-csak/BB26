@@ -1,10 +1,10 @@
 # BB26
 
-BB26 is a JavaScript library for working with [bijective base-26](https://en.wikipedia.org/wiki/Bijective_numeration#The_bijective_base-26_system) (BB26) numbers
+BB26 is a JavaScript library for working with [bijective base-26](https://en.wikipedia.org/wiki/Bijective_numeration#The_bijective_base-26_system) (BB26) numbers.
 
 ## What is bijective base-26 numeration?
 
-You’re probably familiar with BB26 numeration. It’s used for spreadsheet columns, license plate serials, and (probably?) more
+You’re probably familiar with BB26 numeration. It’s used for spreadsheet columns, license plate serials, and (probably?) more.
 
 Here’s an example of decimal (base-10) numbers (the numbers you use every day to count things) compared to their corresponding BB26 numbers:
 
@@ -27,7 +27,7 @@ npm install bb26
 function increment(string: string): string;
 ```
 
-Increments a bijective base-26 string by one numeral
+Increments a bijective base-26 string by one numeral.
 
 ```javascript
 import {increment} from 'bb26';
@@ -78,7 +78,7 @@ range('Z', 'AC'); // ['Z', 'AA', 'AB']
 function toBb26(number: number): string;
 ```
 
-Converts a decimal number to a bijective base-26 string
+Converts a decimal number to a bijective base-26 string.
 
 ```javascript
 import {toBb26} from 'bb26';
@@ -96,7 +96,7 @@ toBb26(28); // 'AB'
 function toDecimal(string: string): number;
 ```
 
-Converts a bijective base-26 string to a decimal number
+Converts a bijective base-26 string to a decimal number.
 
 ```javascript
 import {toDecimal} from 'bb26';
