@@ -6,7 +6,7 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        node-version: [18, 20, 22]
+        node-version: [20, 22, 24]
         os: [macos-latest, ubuntu-latest, windows-latest]
     steps:
       - uses: actions/checkout@v4
@@ -14,4 +14,4 @@ jobs:
         with:
           node-version: ${{matrix.node-version}}
       - run: npm clean-install
-      - run: npm test
+      - run: npm run test
