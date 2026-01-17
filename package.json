@@ -1,6 +1,6 @@
 {
   "name": "bb26",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Utilities for working with bijective base-26 numerals",
   "keywords": [
     "base 26",
