@@ -1,5 +1,8 @@
-name: Test
 on: push
+
+permissions:
+  contents: read
+
 jobs:
   test:
     name: Node.js v${{matrix.node-version}} on ${{matrix.os}}
