@@ -5,15 +5,14 @@ permissions:
 
 jobs:
   test:
-    name: Node.js v${{matrix.node-version}} on ${{matrix.os}}
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
         node-version: [20, 22, 24]
         os: [macos-latest, ubuntu-latest, windows-latest]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: ${{matrix.node-version}}
       - run: npm clean-install
