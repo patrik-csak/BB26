@@ -1,11 +1,10 @@
 {
   "name": "bb26",
   "version": "5.0.2",
-  "description": "Utilities for working with bijective base-26 numerals",
+  "description": "Bijective base-26 utility library",
   "keywords": [
     "base 26",
     "bijective base 26",
-    "hexavigesimal",
     "spreadsheet",
     "spreadsheet column",
     "spreadsheet column letters",
