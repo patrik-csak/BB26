@@ -13,7 +13,7 @@ export default function toDecimal(string: string): number {
 	ow(
 		string,
 		ow.string
-			.matches(/^[A-Z]+$/)
+			.matches(/^[A-Z]+$/v)
 			.message(
 				`Expected string to only contain upper-case letters, got \`${string}\``,
 			),
