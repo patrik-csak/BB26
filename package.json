@@ -28,11 +28,18 @@
   ],
   "scripts": {
     "build": "del-cli distribution && tsc",
-    "format": "eslint --fix && npm run prettier -- --write",
+    "eslint": "eslint --cache",
+    "format:check": "npm run prettier -- --check",
+    "format:fix": "npm run prettier -- --write",
+    "lint:check": "npm run eslint",
+    "lint:fix": "npm run eslint -- --fix",
     "prepare": "npm run build",
-    "prettier": "prettier .",
-    "test": "eslint && npm run prettier -- --check && ava",
-    "test:coverage": "del-cli coverage && eslint && npm run prettier -- --check && c8 ava"
+    "prettier": "prettier --cache .",
+    "quality:check": "npm run format:check && npm run lint:check && npm run types:check",
+    "quality:fix": "npm run format:fix && npm run lint:fix",
+    "test": "ava",
+    "test:coverage": "del-cli coverage && c8 ava",
+    "types:check": "tsc --noEmit"
   },
   "dependencies": {
     "ow": "^3.1.1",

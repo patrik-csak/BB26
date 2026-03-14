@@ -16,4 +16,5 @@ jobs:
         with:
           node-version: ${{matrix.node-version}}
       - run: npm clean-install
+      - run: npm run quality:check
       - run: npm run test
