@@ -33,7 +33,7 @@
     "format:fix": "npm run prettier -- --write",
     "lint:check": "npm run eslint",
     "lint:fix": "npm run eslint -- --fix",
-    "prepare": "npm run build",
+    "prepack": "npm run build",
     "prettier": "prettier --cache .",
     "quality:check": "npm run format:check && npm run lint:check && npm run types:check && npm run unused:check",
     "quality:fix": "npm run format:fix && npm run lint:fix",
