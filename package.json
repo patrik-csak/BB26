@@ -27,7 +27,7 @@
     "distribution"
   ],
   "scripts": {
-    "build": "del-cli distribution && tsc",
+    "build": "rm -fr distribution && tsc",
     "eslint": "eslint --cache",
     "format:check": "npm run prettier -- --check",
     "format:fix": "npm run prettier -- --write",
@@ -45,7 +45,6 @@
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.8",
     "@vitest/coverage-v8": "^4.1.4",
-    "del-cli": "^7.0.0",
     "eslint": "^10.0.3",
     "eslint-plugin-package-json": "^0.91.0",
     "knip": "^5.86.0",
