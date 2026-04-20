@@ -29,5 +29,8 @@ export default defineConfig([
 	{
 		files: ['package.json'],
 		extends: [packageJson.configs.recommended, packageJson.configs.stylistic],
+		rules: {
+			'package-json/scripts-name-casing': 'off',
+		},
 	},
 ]);

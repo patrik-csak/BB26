@@ -2,3 +2,4 @@
 coverage
 distribution
 node_modules
+tsconfig.tsbuildinfo
