@@ -42,9 +42,6 @@
     "types:check": "tsc --noEmit",
     "unused:check": "knip"
   },
-  "dependencies": {
-    "random-int": "^3.0.0"
-  },
   "devDependencies": {
     "@ava/typescript": "^6.0.0",
     "@sindresorhus/tsconfig": "^8.1.0",
