@@ -12,7 +12,7 @@ export default defineConfig([
 			parserOptions: {
 				projectService: {
 					// https://typescript-eslint.io/packages/parser/#allowdefaultproject
-					allowDefaultProject: ['test/*.ts'],
+					allowDefaultProject: ['test/*.ts', 'vitest.config.ts'],
 				},
 			},
 		},

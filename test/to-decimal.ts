@@ -1,4 +1,4 @@
-import test from 'ava';
+import {expect, test} from 'vitest';
 import {toDecimal} from '../source/index.js';
 
 type TestCase = {
@@ -16,11 +16,11 @@ const testCases: TestCase[] = [
 ];
 
 for (const {from, to} of testCases) {
-	test(`converts ${from} to ${to}`, (t) => {
-		t.is(toDecimal(from), to);
+	test(`converts ${from} to ${to}`, () => {
+		expect(toDecimal(from)).toBe(to);
 	});
 }
 
-test('throws for non-upper-case character', (t) => {
-	t.throws(() => toDecimal('a'));
+test('throws for non-upper-case character', () => {
+	expect(() => toDecimal('a')).toThrow();
 });

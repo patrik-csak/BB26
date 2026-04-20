@@ -1,4 +1,4 @@
-import test from 'ava';
+import {expect, test} from 'vitest';
 import {increment} from '../source/index.js';
 
 type TestCase = {
@@ -17,7 +17,7 @@ const testCases: TestCase[] = [
 ];
 
 for (const {from, to} of testCases) {
-	test(`increments ${from} to ${to}`, (t) => {
-		t.is(increment(from), to);
+	test(`increments ${from} to ${to}`, () => {
+		expect(increment(from)).toBe(to);
 	});
 }

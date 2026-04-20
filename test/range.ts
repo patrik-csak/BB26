@@ -1,19 +1,19 @@
-import test from 'ava';
+import {expect, test} from 'vitest';
 import {range} from '../source/index.js';
 
-test('works with end', (t) => {
-	t.deepEqual(range('A'), []);
-	t.deepEqual(range('B'), ['A']);
-	t.deepEqual(range('C'), ['A', 'B']);
-	t.assert(range('AB').includes('AA'));
+test('works with end', () => {
+	expect(range('A')).toEqual([]);
+	expect(range('B')).toEqual(['A']);
+	expect(range('C')).toEqual(['A', 'B']);
+	expect(range('AB').includes('AA')).toBe(true);
 });
 
-test('works with start and end', (t) => {
-	t.deepEqual(range('B', 'C'), ['B']);
-	t.deepEqual(range('B', 'D'), ['B', 'C']);
-	t.deepEqual(range('ZZ', 'AAC'), ['ZZ', 'AAA', 'AAB']);
+test('works with start and end', () => {
+	expect(range('B', 'C')).toEqual(['B']);
+	expect(range('B', 'D')).toEqual(['B', 'C']);
+	expect(range('ZZ', 'AAC')).toEqual(['ZZ', 'AAA', 'AAB']);
 });
 
-test('throws if given a string with a non-upper-case letter', (t) => {
-	t.throws(() => range('a'));
+test('throws if given a string with a non-upper-case letter', () => {
+	expect(() => range('a')).toThrow();
 });

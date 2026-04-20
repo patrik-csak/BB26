@@ -1,4 +1,4 @@
-import test from 'ava';
+import {expect, test} from 'vitest';
 import {toBb26} from '../source/index.js';
 
 type TestCase = {
@@ -16,7 +16,7 @@ const testCases: TestCase[] = [
 ];
 
 for (const {from, to} of testCases) {
-	test(`converts ${from} to ${to}`, (t) => {
-		t.is(toBb26(from), to);
+	test(`converts ${from} to ${to}`, () => {
+		expect(toBb26(from)).toBe(to);
 	});
 }
