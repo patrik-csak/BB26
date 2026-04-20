@@ -1,9 +1,6 @@
 import increment from './increment.js';
 import toDecimal from './to-decimal.js';
 
-export default function range(end: string): string[];
-export default function range(start: string, end: string): string[];
-
 /**
  * Creates an array of bijective base-26 numerals progressing from `start` up
  * to, but not including, `end`.
@@ -13,6 +10,8 @@ export default function range(start: string, end: string): string[];
  * @param start - The start of the range
  * @param end - The end of the range
  */
+export default function range(end: string): string[];
+export default function range(start: string, end: string): string[];
 export default function range(start: string, end?: string): string[] {
 	const _range: string[] = [];
 	const _end = end ?? start;

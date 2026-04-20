@@ -5,9 +5,6 @@ function randomInteger(minimum: number, maximum: number): number {
 	return Math.floor(Math.random() * (maximum - minimum + 1) + minimum);
 }
 
-export default function random(upper: string): string;
-export default function random(lower: string, upper: string): string;
-
 /**
  * Produces a random string between the inclusive `lower` and `upper` bounds. If
  * only one argument is provided, a string between `'A'` and the given string is
@@ -17,6 +14,8 @@ export default function random(lower: string, upper: string): string;
  * @param upper
  * @returns Random string
  */
+export default function random(upper: string): string;
+export default function random(lower: string, upper: string): string;
 export default function random(lower: string, upper?: string): string {
 	const lowerDecimal = upper === undefined ? 1 : toDecimal(lower);
 	const upperDecimal =
