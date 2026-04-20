@@ -55,8 +55,5 @@
     "prettier-plugin-packagejson": "^3.0.2",
     "typescript": "^5.0.2",
     "xo": "^2.0.2"
-  },
-  "engines": {
-    "node": ">=20 <=24"
   }
 }
