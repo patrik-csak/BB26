@@ -1,5 +1,3 @@
-import ow from 'ow';
-
 function charToDecimal(letter: string) {
 	return letter.codePointAt(0)! - 'A'.codePointAt(0)! + 1;
 }
@@ -10,14 +8,11 @@ function charToDecimal(letter: string) {
  * @param string
  */
 export default function toDecimal(string: string): number {
-	ow(
-		string,
-		ow.string
-			.matches(/^[A-Z]+$/v)
-			.message(
-				`Expected string to only contain upper-case letters, got \`${string}\``,
-			),
-	);
+	if (typeof string !== 'string' || !/^[A-Z]+$/v.test(string)) {
+		throw new TypeError(
+			`Expected string to only contain upper-case letters, got \`${string}\``,
+		);
+	}
 
 	let number = 0;
 
