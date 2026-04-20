@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Updated dependencies
+- Updated and removed dependencies
 
 ## [5.0.2](https://github.com/patrik-csak/BB26/compare/v5.0.1...v5.0.2) – 2026-01-21
 
