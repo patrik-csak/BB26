@@ -16,6 +16,7 @@
   },
   "license": "MIT",
   "author": "Patrik Csak <p@trikcsak.com> (https://patrikcsak.com)",
+  "sideEffects": false,
   "type": "module",
   "exports": {
     ".": {
