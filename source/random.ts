@@ -1,6 +1,9 @@
-import randomInteger from 'random-int';
 import toBb26 from './to-bb26.js';
 import toDecimal from './to-decimal.js';
+
+function randomInteger(minimum: number, maximum: number): number {
+	return Math.floor(Math.random() * (maximum - minimum + 1) + minimum);
+}
 
 export default function random(upper: string): string;
 export default function random(lower: string, upper: string): string;
