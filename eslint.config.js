@@ -7,4 +7,14 @@ export default defineConfig([
 	packageJson.configs.recommended,
 	packageJson.configs.stylistic,
 	...xo.xoToEslintConfig([{prettier: 'compat'}]),
+	{
+		languageOptions: {
+			parserOptions: {
+				projectService: {
+					// https://typescript-eslint.io/packages/parser/#allowdefaultproject
+					allowDefaultProject: ['test/*.ts'],
+				},
+			},
+		},
+	},
 ]);

@@ -1,4 +1,18 @@
 {
-	"extends": "@sindresorhus/tsconfig",
-	"include": ["source", "test"]
+	"extends": "@tsconfig/strictest",
+	"include": ["source"],
+	"compilerOptions": {
+		"rootDir": "source",
+		"outDir": "distribution",
+		"declaration": true,
+
+		// more strictness
+		"forceConsistentCasingInFileNames": true,
+		"noEmitOnError": true,
+		"useDefineForClassFields": true,
+
+		// https://www.typescriptlang.org/tsconfig/#erasableSyntaxOnly
+		"erasableSyntaxOnly": true,
+		"verbatimModuleSyntax": true
+	}
 }
