@@ -1,4 +1,5 @@
 import {expect, test} from 'vitest';
+
 import {toBb26} from '../source/index.js';
 
 type TestCase = {

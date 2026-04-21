@@ -1,4 +1,5 @@
 import {expect, test} from 'vitest';
+
 import {toDecimal} from '../source/index.js';
 
 type TestCase = {

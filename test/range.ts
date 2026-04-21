@@ -1,4 +1,5 @@
 import {expect, test} from 'vitest';
+
 import {range} from '../source/index.js';
 
 test('works with end', () => {

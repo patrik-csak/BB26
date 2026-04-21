@@ -1,7 +1,3 @@
-function toChar(number: number) {
-	return String.fromCodePoint('A'.codePointAt(0)! - 1 + number);
-}
-
 /**
  * Converts a decimal number to a bijective base-26 string.
  *
@@ -17,4 +13,8 @@ export default function toBb26(number: number): string {
 	}
 
 	return string;
+}
+
+function toChar(number: number) {
+	return String.fromCodePoint('A'.codePointAt(0)! - 1 + number);
 }

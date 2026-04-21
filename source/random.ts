@@ -1,10 +1,6 @@
 import toBb26 from './to-bb26.js';
 import toDecimal from './to-decimal.js';
 
-function randomInteger(minimum: number, maximum: number): number {
-	return Math.floor(Math.random() * (maximum - minimum + 1) + minimum);
-}
-
 /**
  * Produces a random string between the inclusive `lower` and `upper` bounds. If
  * only one argument is provided, a string between `'A'` and the given string is
@@ -24,4 +20,8 @@ export default function random(lower: string, upper?: string): string {
 	const integer = randomInteger(lowerDecimal, upperDecimal);
 
 	return toBb26(integer);
+}
+
+function randomInteger(minimum: number, maximum: number): number {
+	return Math.floor(Math.random() * (maximum - minimum + 1) + minimum);
 }
