@@ -47,6 +47,7 @@
     "unused:fix": "npm run _knip -- --fix"
   },
   "devDependencies": {
+    "@e18e/eslint-plugin": "^0.3.0",
     "@tsconfig/strictest": "^2.0.8",
     "@vitest/coverage-v8": "^4.1.4",
     "eslint": "^10.0.3",
