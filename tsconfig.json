@@ -5,6 +5,7 @@
 		"rootDir": "source",
 		"outDir": "distribution",
 		"declaration": true,
+		"incremental": true,
 
 		// more strictness
 		"forceConsistentCasingInFileNames": true,

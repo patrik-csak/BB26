@@ -31,7 +31,7 @@
     "_eslint": "eslint --cache --cache-strategy=content",
     "_knip": "knip --cache",
     "_prettier": "prettier --cache .",
-    "_typescript": "tsc --incremental",
+    "_typescript": "tsc",
     "build": "rm -fr distribution tsconfig.tsbuildinfo && npm run _typescript",
     "format:check": "npm run _prettier -- --check",
     "format:fix": "npm run _prettier -- --write",
