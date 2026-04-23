@@ -5,11 +5,10 @@
  */
 export default function toBb26(number: number): string {
 	let string = '';
-	let _number = number;
 
-	while (_number > 0) {
-		string = toChar(_number % 26 || 26) + string;
-		_number = Math.floor((_number - 1) / 26);
+	while (number > 0) {
+		string = toChar(number % 26 || 26) + string;
+		number = Math.floor((number - 1) / 26);
 	}
 
 	return string;
