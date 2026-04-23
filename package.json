@@ -31,7 +31,7 @@
     "_eslint": "eslint --cache --cache-strategy=content",
     "_knip": "knip --cache",
     "_prettier": "prettier --cache .",
-    "_typescript": "tsc",
+    "_typescript": "tsgo",
     "build": "rm -fr distribution tsconfig.tsbuildinfo && npm run _typescript",
     "format:check": "npm run _prettier -- --check",
     "format:fix": "npm run _prettier -- --write",
@@ -49,13 +49,13 @@
   "devDependencies": {
     "@e18e/eslint-plugin": "^0.3.0",
     "@tsconfig/strictest": "^2.0.8",
+    "@typescript/native-preview": "^7.0.0-dev.20260415.1",
     "@vitest/coverage-v8": "^4.1.4",
     "eslint": "^10.0.3",
     "eslint-plugin-package-json": "^0.91.0",
     "eslint-plugin-perfectionist": "^5.8.0",
     "knip": "^6.4.1",
     "prettier": "^3.6.2",
-    "typescript": "^6.0.2",
     "vitest": "^4.1.4",
     "xo": "^2.0.2"
   }
