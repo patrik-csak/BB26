@@ -1,4 +1,4 @@
-import increment from './increment.js';
+import toBb26 from './to-bb26.js';
 import toDecimal from './to-decimal.js';
 
 /**
@@ -13,13 +13,18 @@ import toDecimal from './to-decimal.js';
 export default function range(end: string): string[];
 export default function range(start: string, end: string): string[];
 export default function range(start: string, end?: string): string[] {
-	const _range: string[] = [];
-	const _end = end ?? start;
-	const _start = end ? start : 'A';
-
-	for (let i = _start; toDecimal(i) < toDecimal(_end); i = increment(i)) {
-		_range.push(i);
+	if (!end) {
+		end = start;
+		start = 'A';
 	}
 
-	return _range;
+	const range: string[] = [];
+	const startDecimal = toDecimal(start);
+	const endDecimal = toDecimal(end);
+
+	for (let decimal = startDecimal; decimal < endDecimal; decimal++) {
+		range.push(toBb26(decimal));
+	}
+
+	return range;
 }
