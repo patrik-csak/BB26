@@ -4,6 +4,16 @@
  * @param number
  */
 export default function toBb26(number: number): string {
+	if (typeof number !== 'number') {
+		throw new TypeError(`Expected number, got \`${String(number)}\``);
+	}
+
+	if (!Number.isInteger(number) || number < 1) {
+		throw new RangeError(
+			`Expected number to be a positive integer, got \`${number}\``,
+		);
+	}
+
 	let string = '';
 
 	while (number > 0) {

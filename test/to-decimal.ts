@@ -22,6 +22,15 @@ for (const {from, to} of testCases) {
 	});
 }
 
-test('throws for non-upper-case character', () => {
-	expect(() => toDecimal('a')).toThrow();
+test('throws TypeError for non-string input', () => {
+	expect(() => {
+		// @ts-expect-error test
+		toDecimal(1);
+	}).toThrow(TypeError);
+});
+
+test('throws RangeError for invalid bijective base-26 strings', () => {
+	expect(() => toDecimal('')).toThrow(RangeError);
+	expect(() => toDecimal('a')).toThrow(RangeError);
+	expect(() => toDecimal('A1')).toThrow(RangeError);
 });

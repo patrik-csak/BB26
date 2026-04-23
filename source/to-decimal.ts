@@ -10,8 +10,12 @@ const allowedStringPattern = /^[A-Z]+$/v;
  * @param string
  */
 export default function toDecimal(string: string): number {
-	if (typeof string !== 'string' || !allowedStringPattern.test(string)) {
-		throw new TypeError(
+	if (typeof string !== 'string') {
+		throw new TypeError(`Expected string, got \`${String(string)}\``);
+	}
+
+	if (!allowedStringPattern.test(string)) {
+		throw new RangeError(
 			`Expected string to only contain upper-case letters, got \`${string}\``,
 		);
 	}
