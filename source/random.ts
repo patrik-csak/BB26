@@ -17,9 +17,9 @@ export default function random(lower: string, upper?: string): string {
 	const upperDecimal =
 		upper === undefined ? toDecimal(lower) : toDecimal(upper);
 
-	const integer = randomInteger(lowerDecimal, upperDecimal);
+	const randomDecimal = randomInteger(lowerDecimal, upperDecimal);
 
-	return toBb26(integer);
+	return toBb26(randomDecimal);
 }
 
 function randomInteger(minimum: number, maximum: number): number {
