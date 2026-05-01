@@ -1,0 +1,42 @@
+name: vp-migrate-bb26
+
+on:
+  push:
+    branches: [vp]
+
+jobs:
+  vp-migrate-bb26:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+
+      - run: |
+          uname -a
+
+          arch
+
+          node --version
+
+          npm install --global npm@latest
+
+          npm --version
+
+          VP_NODE_MANAGER=no curl -fsSL https://vite.plus | VP_NODE_MANAGER=no bash
+          export PATH="$HOME/.vite-plus/bin:$PATH"
+
+          vp --version
+
+          npm install
+
+          vp migrate --no-interactive
