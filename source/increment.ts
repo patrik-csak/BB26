@@ -1,3 +1,4 @@
+import checkString from './check-string.js';
 import toBb26 from './to-bb26.js';
 import toDecimal from './to-decimal.js';
 
@@ -7,5 +8,7 @@ import toDecimal from './to-decimal.js';
  * @return Incremented string
  */
 export default function increment(string: string): string {
+	checkString(string);
+
 	return toBb26(toDecimal(string) + 1);
 }

@@ -1,3 +1,4 @@
+import checkString from './check-string.js';
 import toBb26 from './to-bb26.js';
 import toDecimal from './to-decimal.js';
 
@@ -13,15 +14,18 @@ import toDecimal from './to-decimal.js';
 export default function random(upper: string): string;
 export default function random(lower: string, upper: string): string;
 export default function random(lower: string, upper?: string): string {
-	const lowerDecimal = upper === undefined ? 1 : toDecimal(lower);
-	const upperDecimal =
-		upper === undefined ? toDecimal(lower) : toDecimal(upper);
+	if (upper === undefined) {
+		upper = lower;
+		lower = 'A';
+	}
 
-	const randomDecimal = randomInteger(lowerDecimal, upperDecimal);
+	for (const string of [lower, upper]) checkString(string);
 
-	return toBb26(randomDecimal);
+	const randomInteger = getRandomInteger(toDecimal(lower), toDecimal(upper));
+
+	return toBb26(randomInteger);
 }
 
-function randomInteger(minimum: number, maximum: number): number {
+function getRandomInteger(minimum: number, maximum: number): number {
 	return Math.floor(Math.random() * (maximum - minimum + 1) + minimum);
 }

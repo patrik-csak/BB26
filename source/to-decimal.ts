@@ -1,8 +1,4 @@
-function charToDecimal(letter: string) {
-	return letter.codePointAt(0)! - 'A'.codePointAt(0)! + 1;
-}
-
-const allowedStringPattern = /^[A-Z]+$/v;
+import checkString from './check-string.js';
 
 /**
  * Converts a bijective base-26 string to a decimal number.
@@ -10,23 +6,19 @@ const allowedStringPattern = /^[A-Z]+$/v;
  * @param string
  */
 export default function toDecimal(string: string): number {
-	if (typeof string !== 'string') {
-		throw new TypeError(`Expected string, got \`${String(string)}\``);
-	}
-
-	if (!allowedStringPattern.test(string)) {
-		throw new RangeError(
-			`Expected string to only contain upper-case letters, got \`${string}\``,
-		);
-	}
+	checkString(string);
 
 	let number = 0;
 
 	for (let i = 0; i < string.length; i++) {
 		const char = string[string.length - i - 1]!;
 
-		number += 26 ** i * charToDecimal(char);
+		number += 26 ** i * characterToDecimal(char);
 	}
 
 	return number;
+}
+
+function characterToDecimal(letter: string) {
+	return letter.codePointAt(0)! - 'A'.codePointAt(0)! + 1;
 }

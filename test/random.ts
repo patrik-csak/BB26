@@ -17,3 +17,24 @@ test('returns a valid string given both upper and lower bounds', () => {
 		expect(validLetters.includes(random('AA', 'ZZ'))).toBe(true);
 	}
 });
+
+test('throws TypeError for non-string input', () => {
+	expect(() => {
+		// @ts-expect-error test
+		random(1);
+	}).toThrow(TypeError);
+
+	expect(() => {
+		// @ts-expect-error test
+		random('A', 1);
+	}).toThrow(TypeError);
+});
+
+test('throws RangeError for invalid bijective base-26 strings', () => {
+	expect(() => random('')).toThrow(RangeError);
+	expect(() => random('a')).toThrow(RangeError);
+	expect(() => random('A1')).toThrow(RangeError);
+	expect(() => random('A', '')).toThrow(RangeError);
+	expect(() => random('A', 'a')).toThrow(RangeError);
+	expect(() => random('A', 'A1')).toThrow(RangeError);
+});

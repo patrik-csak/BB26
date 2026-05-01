@@ -1,3 +1,4 @@
+import checkString from './check-string.js';
 import toBb26 from './to-bb26.js';
 import toDecimal from './to-decimal.js';
 
@@ -13,10 +14,12 @@ import toDecimal from './to-decimal.js';
 export default function range(end: string): string[];
 export default function range(start: string, end: string): string[];
 export default function range(start: string, end?: string): string[] {
-	if (!end) {
+	if (end === undefined) {
 		end = start;
 		start = 'A';
 	}
+
+	for (const string of [start, end]) checkString(string);
 
 	const range: string[] = [];
 	const startDecimal = toDecimal(start);

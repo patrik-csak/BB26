@@ -22,3 +22,16 @@ for (const {from, to} of testCases) {
 		expect(increment(from)).toBe(to);
 	});
 }
+
+test('throws TypeError for non-string input', () => {
+	expect(() => {
+		// @ts-expect-error test
+		increment(1);
+	}).toThrow(TypeError);
+});
+
+test('throws RangeError for invalid bijective base-26 strings', () => {
+	expect(() => increment('')).toThrow(RangeError);
+	expect(() => increment('a')).toThrow(RangeError);
+	expect(() => increment('A1')).toThrow(RangeError);
+});

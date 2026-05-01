@@ -15,6 +15,23 @@ test('works with start and end', () => {
 	expect(range('ZZ', 'AAC')).toEqual(['ZZ', 'AAA', 'AAB']);
 });
 
-test('throws if given a string with a non-upper-case letter', () => {
-	expect(() => range('a')).toThrow();
+test('throws TypeError for non-string input', () => {
+	expect(() => {
+		// @ts-expect-error test
+		range(1);
+	}).toThrow(TypeError);
+
+	expect(() => {
+		// @ts-expect-error test
+		range('A', 1);
+	}).toThrow(TypeError);
+});
+
+test('throws RangeError for invalid bijective base-26 strings', () => {
+	expect(() => range('')).toThrow(RangeError);
+	expect(() => range('a')).toThrow(RangeError);
+	expect(() => range('A1')).toThrow(RangeError);
+	expect(() => range('A', '')).toThrow(RangeError);
+	expect(() => range('A', 'a')).toThrow(RangeError);
+	expect(() => range('A', 'A1')).toThrow(RangeError);
 });

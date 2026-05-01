@@ -6,6 +6,7 @@
 		"outDir": "distribution",
 		"declaration": true,
 		"incremental": true,
+		"stripInternal": true,
 
 		// more strictness
 		"forceConsistentCasingInFileNames": true,
