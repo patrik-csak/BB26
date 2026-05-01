@@ -21,13 +21,23 @@ npm install bb26
 
 ## API
 
+- [`increment`](#increment)
+- [`random`](#random)
+- [`range`](#range)
+- [`toBb26`](#tobb26)
+- [`toDecimal`](#todecimal)
+
 ### `increment()`
+
+Increments a bijective base-26 string by one numeral.
+
+#### Signature
 
 ```typescript
 function increment(string: string): string;
 ```
 
-Increments a bijective base-26 string by one numeral.
+#### Examples
 
 ```javascript
 import {increment} from 'bb26';
@@ -39,12 +49,16 @@ increment('AA'); // 'AB'
 
 ### `random()`
 
+Produces a random string between the inclusive `lower` and `upper` bounds. If only one argument is provided, a string between `'A'` and the given string is returned.
+
+#### Signature
+
 ```typescript
 function random(upper: string): string;
 function random(lower: string, upper: string): string;
 ```
 
-Produces a random string between the inclusive `lower` and `upper` bounds. If only one argument is provided, a string between `'A'` and the given string is returned.
+#### Examples
 
 ```javascript
 import {random} from 'bb26';
@@ -55,12 +69,16 @@ random('AAA', 'AAAA'); // 'KXZ'
 
 ### `range()`
 
+Creates an array of bijective base-26 numerals progressing from `start` up to, but not including, `end`. If `end` is not specified, it's set to `start` with `start` then set to `'A'`.
+
+#### Signature
+
 ```typescript
 function range(end: string): string[];
 function range(start: string, end: string): string[];
 ```
 
-Creates an array of bijective base-26 numerals progressing from `start` up to, but not including, `end`. If `end` is not specified, it's set to `start` with `start` then set to `'A'`.
+#### Examples
 
 ```javascript
 import {range} from 'bb26';
@@ -74,11 +92,15 @@ range('Z', 'AC'); // ['Z', 'AA', 'AB']
 
 ### `toBb26()`
 
+Converts a decimal number to a bijective base-26 string.
+
+#### Signature
+
 ```typescript
 function toBb26(number: number): string;
 ```
 
-Converts a decimal number to a bijective base-26 string.
+#### Examples
 
 ```javascript
 import {toBb26} from 'bb26';
@@ -92,11 +114,15 @@ toBb26(28); // 'AB'
 
 ### `toDecimal()`
 
+Converts a bijective base-26 string to a decimal number.
+
+#### Signature
+
 ```typescript
 function toDecimal(string: string): number;
 ```
 
-Converts a bijective base-26 string to a decimal number.
+#### Examples
 
 ```javascript
 import {toDecimal} from 'bb26';
