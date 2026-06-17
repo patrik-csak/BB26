@@ -58,5 +58,11 @@
     "prettier": "^3.6.2",
     "vitest": "^4.1.4",
     "xo": "^2.0.2"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": "^11.10.0"
+    }
   }
 }
