@@ -1,6 +1,5 @@
 import assert from 'node:assert/strict';
 import {suite, test} from 'node:test';
-
 import {toDecimal} from '../source/index.ts';
 
 type TestCase = {

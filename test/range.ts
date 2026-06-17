@@ -1,6 +1,5 @@
 import assert from 'node:assert/strict';
 import {suite, test} from 'node:test';
-
 import {range} from '../source/index.ts';
 
 void suite('range', () => {

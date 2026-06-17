@@ -1,6 +1,5 @@
 import assert from 'node:assert/strict';
 import {suite, test} from 'node:test';
-
 import {random, range} from '../source/index.ts';
 
 void suite('random', () => {
