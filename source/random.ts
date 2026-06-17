@@ -1,6 +1,6 @@
-import checkString from './check-string.js';
-import toBb26 from './to-bb26.js';
-import toDecimal from './to-decimal.js';
+import checkString from './check-string.ts';
+import toBb26 from './to-bb26.ts';
+import toDecimal from './to-decimal.ts';
 
 /**
  * Produces a random string between the inclusive `lower` and `upper` bounds. If

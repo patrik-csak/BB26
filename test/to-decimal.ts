@@ -1,6 +1,7 @@
-import {expect, test} from 'vitest';
+import assert from 'node:assert/strict';
+import {suite, test} from 'node:test';
 
-import {toDecimal} from '../source/index.js';
+import {toDecimal} from '../source/index.ts';
 
 type TestCase = {
 	from: string;
@@ -16,21 +17,23 @@ const testCases: TestCase[] = [
 	{from: 'AC', to: 29},
 ];
 
-for (const {from, to} of testCases) {
-	test(`converts ${from} to ${to}`, () => {
-		expect(toDecimal(from)).toBe(to);
+void suite('toDecimal', () => {
+	for (const {from, to} of testCases) {
+		void test(`converts ${from} to ${to}`, () => {
+			assert.equal(toDecimal(from), to);
+		});
+	}
+
+	void test('throws TypeError for non-string input', () => {
+		assert.throws(() => {
+			// @ts-expect-error test
+			toDecimal(1);
+		}, TypeError);
 	});
-}
 
-test('throws TypeError for non-string input', () => {
-	expect(() => {
-		// @ts-expect-error test
-		toDecimal(1);
-	}).toThrow(TypeError);
-});
-
-test('throws RangeError for invalid bijective base-26 strings', () => {
-	expect(() => toDecimal('')).toThrow(RangeError);
-	expect(() => toDecimal('a')).toThrow(RangeError);
-	expect(() => toDecimal('A1')).toThrow(RangeError);
+	void test('throws RangeError for invalid bijective base-26 strings', () => {
+		assert.throws(() => toDecimal(''), RangeError);
+		assert.throws(() => toDecimal('a'), RangeError);
+		assert.throws(() => toDecimal('A1'), RangeError);
+	});
 });

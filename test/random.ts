@@ -1,40 +1,43 @@
-import {expect, test} from 'vitest';
+import assert from 'node:assert/strict';
+import {suite, test} from 'node:test';
 
-import {random, range} from '../source/index.js';
+import {random, range} from '../source/index.ts';
 
-test('returns a valid string given only an upper bound', () => {
-	const validLetters = range('AAA');
+void suite('random', () => {
+	void test('returns a valid string given only an upper bound', () => {
+		const validLetters = range('AAA');
 
-	for (let i = 0; i < 100_000; ++i) {
-		expect(validLetters.includes(random('ZZ'))).toBe(true);
-	}
-});
+		for (let i = 0; i < 100_000; ++i) {
+			assert.equal(validLetters.includes(random('ZZ')), true);
+		}
+	});
 
-test('returns a valid string given both upper and lower bounds', () => {
-	const validLetters = range('AA', 'AAA');
+	void test('returns a valid string given both upper and lower bounds', () => {
+		const validLetters = range('AA', 'AAA');
 
-	for (let i = 0; i < 100_000; ++i) {
-		expect(validLetters.includes(random('AA', 'ZZ'))).toBe(true);
-	}
-});
+		for (let i = 0; i < 100_000; ++i) {
+			assert.equal(validLetters.includes(random('AA', 'ZZ')), true);
+		}
+	});
 
-test('throws TypeError for non-string input', () => {
-	expect(() => {
-		// @ts-expect-error test
-		random(1);
-	}).toThrow(TypeError);
+	void test('throws TypeError for non-string input', () => {
+		assert.throws(() => {
+			// @ts-expect-error test
+			random(1);
+		}, TypeError);
 
-	expect(() => {
-		// @ts-expect-error test
-		random('A', 1);
-	}).toThrow(TypeError);
-});
+		assert.throws(() => {
+			// @ts-expect-error test
+			random('A', 1);
+		}, TypeError);
+	});
 
-test('throws RangeError for invalid bijective base-26 strings', () => {
-	expect(() => random('')).toThrow(RangeError);
-	expect(() => random('a')).toThrow(RangeError);
-	expect(() => random('A1')).toThrow(RangeError);
-	expect(() => random('A', '')).toThrow(RangeError);
-	expect(() => random('A', 'a')).toThrow(RangeError);
-	expect(() => random('A', 'A1')).toThrow(RangeError);
+	void test('throws RangeError for invalid bijective base-26 strings', () => {
+		assert.throws(() => random(''), RangeError);
+		assert.throws(() => random('a'), RangeError);
+		assert.throws(() => random('A1'), RangeError);
+		assert.throws(() => random('A', ''), RangeError);
+		assert.throws(() => random('A', 'a'), RangeError);
+		assert.throws(() => random('A', 'A1'), RangeError);
+	});
 });

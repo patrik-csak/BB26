@@ -1,6 +1,7 @@
-import {expect, test} from 'vitest';
+import assert from 'node:assert/strict';
+import {suite, test} from 'node:test';
 
-import {toBb26} from '../source/index.js';
+import {toBb26} from '../source/index.ts';
 
 type TestCase = {
 	from: number;
@@ -16,22 +17,24 @@ const testCases: TestCase[] = [
 	{from: 29, to: 'AC'},
 ];
 
-for (const {from, to} of testCases) {
-	test(`converts ${from} to ${to}`, () => {
-		expect(toBb26(from)).toBe(to);
+void suite('toBb26', () => {
+	for (const {from, to} of testCases) {
+		void test(`converts ${from} to ${to}`, () => {
+			assert.equal(toBb26(from), to);
+		});
+	}
+
+	void test('throws TypeError for non-number input', () => {
+		assert.throws(() => {
+			// @ts-expect-error test
+			toBb26('1');
+		}, TypeError);
 	});
-}
 
-test('throws TypeError for non-number input', () => {
-	expect(() => {
-		// @ts-expect-error test
-		toBb26('1');
-	}).toThrow(TypeError);
-});
-
-test('throws RangeError for invalid numbers', () => {
-	expect(() => toBb26(-1)).toThrow(RangeError);
-	expect(() => toBb26(0)).toThrow(RangeError);
-	expect(() => toBb26(Number.NaN)).toThrow(RangeError);
-	expect(() => toBb26(1.5)).toThrow(RangeError);
+	void test('throws RangeError for invalid numbers', () => {
+		assert.throws(() => toBb26(-1), RangeError);
+		assert.throws(() => toBb26(0), RangeError);
+		assert.throws(() => toBb26(Number.NaN), RangeError);
+		assert.throws(() => toBb26(1.5), RangeError);
+	});
 });

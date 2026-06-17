@@ -1,4 +1,4 @@
-import checkNumber from './check-number.js';
+import checkNumber from './check-number.ts';
 
 /**
  * Converts a decimal number to a bijective base-26 string.

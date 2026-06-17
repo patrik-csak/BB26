@@ -1,37 +1,40 @@
-import {expect, test} from 'vitest';
+import assert from 'node:assert/strict';
+import {suite, test} from 'node:test';
 
-import {range} from '../source/index.js';
+import {range} from '../source/index.ts';
 
-test('works with end', () => {
-	expect(range('A')).toEqual([]);
-	expect(range('B')).toEqual(['A']);
-	expect(range('C')).toEqual(['A', 'B']);
-	expect(range('AB').includes('AA')).toBe(true);
-});
+void suite('range', () => {
+	void test('works with end', () => {
+		assert.deepEqual(range('A'), []);
+		assert.deepEqual(range('B'), ['A']);
+		assert.deepEqual(range('C'), ['A', 'B']);
+		assert.equal(range('AB').includes('AA'), true);
+	});
 
-test('works with start and end', () => {
-	expect(range('B', 'C')).toEqual(['B']);
-	expect(range('B', 'D')).toEqual(['B', 'C']);
-	expect(range('ZZ', 'AAC')).toEqual(['ZZ', 'AAA', 'AAB']);
-});
+	void test('works with start and end', () => {
+		assert.deepEqual(range('B', 'C'), ['B']);
+		assert.deepEqual(range('B', 'D'), ['B', 'C']);
+		assert.deepEqual(range('ZZ', 'AAC'), ['ZZ', 'AAA', 'AAB']);
+	});
 
-test('throws TypeError for non-string input', () => {
-	expect(() => {
-		// @ts-expect-error test
-		range(1);
-	}).toThrow(TypeError);
+	void test('throws TypeError for non-string input', () => {
+		assert.throws(() => {
+			// @ts-expect-error test
+			range(1);
+		}, TypeError);
 
-	expect(() => {
-		// @ts-expect-error test
-		range('A', 1);
-	}).toThrow(TypeError);
-});
+		assert.throws(() => {
+			// @ts-expect-error test
+			range('A', 1);
+		}, TypeError);
+	});
 
-test('throws RangeError for invalid bijective base-26 strings', () => {
-	expect(() => range('')).toThrow(RangeError);
-	expect(() => range('a')).toThrow(RangeError);
-	expect(() => range('A1')).toThrow(RangeError);
-	expect(() => range('A', '')).toThrow(RangeError);
-	expect(() => range('A', 'a')).toThrow(RangeError);
-	expect(() => range('A', 'A1')).toThrow(RangeError);
+	void test('throws RangeError for invalid bijective base-26 strings', () => {
+		assert.throws(() => range(''), RangeError);
+		assert.throws(() => range('a'), RangeError);
+		assert.throws(() => range('A1'), RangeError);
+		assert.throws(() => range('A', ''), RangeError);
+		assert.throws(() => range('A', 'a'), RangeError);
+		assert.throws(() => range('A', 'A1'), RangeError);
+	});
 });

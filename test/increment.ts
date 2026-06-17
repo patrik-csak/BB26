@@ -1,6 +1,7 @@
-import {expect, test} from 'vitest';
+import assert from 'node:assert/strict';
+import {suite, test} from 'node:test';
 
-import {increment} from '../source/index.js';
+import {increment} from '../source/index.ts';
 
 type TestCase = {
 	from: string;
@@ -17,21 +18,23 @@ const testCases: TestCase[] = [
 	{from: 'AAB', to: 'AAC'},
 ];
 
-for (const {from, to} of testCases) {
-	test(`increments ${from} to ${to}`, () => {
-		expect(increment(from)).toBe(to);
+void suite('increment', () => {
+	for (const {from, to} of testCases) {
+		void test(`increments ${from} to ${to}`, () => {
+			assert.equal(increment(from), to);
+		});
+	}
+
+	void test('throws TypeError for non-string input', () => {
+		assert.throws(() => {
+			// @ts-expect-error test
+			increment(1);
+		}, TypeError);
 	});
-}
 
-test('throws TypeError for non-string input', () => {
-	expect(() => {
-		// @ts-expect-error test
-		increment(1);
-	}).toThrow(TypeError);
-});
-
-test('throws RangeError for invalid bijective base-26 strings', () => {
-	expect(() => increment('')).toThrow(RangeError);
-	expect(() => increment('a')).toThrow(RangeError);
-	expect(() => increment('A1')).toThrow(RangeError);
+	void test('throws RangeError for invalid bijective base-26 strings', () => {
+		assert.throws(() => increment(''), RangeError);
+		assert.throws(() => increment('a'), RangeError);
+		assert.throws(() => increment('A1'), RangeError);
+	});
 });

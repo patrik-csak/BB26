@@ -40,8 +40,8 @@
     "prepack": "npm run build",
     "quality:check": "npm run format:check && npm run lint:check && npm run types:check && npm run unused:check",
     "quality:fix": "npm run format:fix && npm run lint:fix && npm run unused:fix",
-    "test": "vitest run",
-    "test:coverage": "vitest run --coverage",
+    "test": "node --test",
+    "test:coverage": "npm run test -- --experimental-test-coverage",
     "types:check": "npm run _typescript -- --noEmit",
     "unused:check": "npm run _knip",
     "unused:fix": "npm run _knip -- --fix"
@@ -49,17 +49,20 @@
   "devDependencies": {
     "@e18e/eslint-plugin": "^0.3.0",
     "@tsconfig/strictest": "^2.0.8",
+    "@types/node": "^24.13.2",
     "@typescript/native-preview": "^7.0.0-dev.20260415.1",
-    "@vitest/coverage-v8": "^4.1.4",
     "eslint": "^10.0.3",
     "eslint-plugin-package-json": "^0.91.0",
     "eslint-plugin-perfectionist": "^5.8.0",
     "knip": "^6.4.1",
     "prettier": "^3.6.2",
-    "vitest": "^4.1.4",
     "xo": "^2.0.2"
   },
   "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24"
+    },
     "packageManager": {
       "name": "npm",
       "version": "^11.10.0"
