@@ -33,7 +33,7 @@ void suite('toBb26', () => {
 	void test('throws RangeError for invalid numbers', () => {
 		assert.throws(() => toBb26(-1), RangeError);
 		assert.throws(() => toBb26(0), RangeError);
-		assert.throws(() => toBb26(Number.NaN), RangeError);
+		assert.throws(() => toBb26(NaN), RangeError);
 		assert.throws(() => toBb26(1.5), RangeError);
 	});
 });

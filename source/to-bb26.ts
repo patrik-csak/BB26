@@ -1,9 +1,9 @@
 import checkNumber from './check-number.ts';
 
 /**
- * Converts a decimal number to a bijective base-26 string.
- *
- * @param number
+ Converts a decimal number to a bijective base-26 string.
+ 
+ @param number
  */
 export default function toBb26(number: number): string {
 	checkNumber(number);

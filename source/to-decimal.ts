@@ -1,9 +1,9 @@
 import checkString from './check-string.ts';
 
 /**
- * Converts a bijective base-26 string to a decimal number.
- *
- * @param string
+ Converts a bijective base-26 string to a decimal number.
+ 
+ @param string
  */
 export default function toDecimal(string: string): number {
 	checkString(string);

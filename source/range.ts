@@ -3,13 +3,13 @@ import toBb26 from './to-bb26.ts';
 import toDecimal from './to-decimal.ts';
 
 /**
- * Creates an array of bijective base-26 numerals progressing from `start` up
- * to, but not including, `end`.
- *
- * If `end` is not specified, it's set to `start` with `start` then set to `'A'`.
- *
- * @param start - The start of the range
- * @param end - The end of the range
+ Creates an array of bijective base-26 numerals progressing from `start` up
+ to, but not including, `end`.
+ 
+ If `end` is not specified, it's set to `start` with `start` then set to `'A'`.
+ 
+ @param start - The start of the range
+ @param end - The end of the range
  */
 export default function range(end: string): string[];
 export default function range(start: string, end: string): string[];
@@ -19,7 +19,9 @@ export default function range(start: string, end?: string): string[] {
 		start = 'A';
 	}
 
-	for (const string of [start, end]) checkString(string);
+	for (const string of [start, end]) {
+		checkString(string);
+	}
 
 	const range: string[] = [];
 	const startDecimal = toDecimal(start);
