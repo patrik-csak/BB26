@@ -1,0 +1,7 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+
+  // Knip currently only supports XO v0 config files
+  // https://github.com/webpro-nl/knip/blob/knip%406.17.2/packages/knip/src/plugins/xo/index.ts#L15-L17
+  "entry": "xo.config.ts"
+}
