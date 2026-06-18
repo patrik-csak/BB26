@@ -4,6 +4,7 @@
 	"compilerOptions": {
 		"rootDir": "source",
 		"outDir": "distribution",
+		"types": ["node"],
 		"declaration": true,
 		"incremental": true,
 		"stripInternal": true,
