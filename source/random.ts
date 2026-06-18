@@ -3,16 +3,22 @@ import toBb26 from './to-bb26.ts';
 import toDecimal from './to-decimal.ts';
 
 /**
- Produces a random string between the inclusive `lower` and `upper` bounds. If
- only one argument is provided, a string between `'A'` and the given string is
- returned.
+ Produces a random string between `'A'` and the inclusive `upper` bound
 
- @param lower
- @param upper
+ @param upper - Inclusive upper bound
  @returns Random string
  */
 export default function random(upper: string): string;
+
+/**
+ Produces a random string between the inclusive `lower` and `upper` bounds
+
+ @param lower - Inclusive lower bound
+ @param upper - Inclusive upper bound
+ @returns Random string
+ */
 export default function random(lower: string, upper: string): string;
+
 export default function random(lower: string, upper?: string): string {
 	if (upper === undefined) {
 		upper = lower;
@@ -29,5 +35,5 @@ export default function random(lower: string, upper?: string): string {
 }
 
 function getRandomInteger(minimum: number, maximum: number): number {
-	return Math.floor(Math.random() * (maximum - minimum + 1) + minimum);
+	return Math.floor((Math.random() * (maximum - minimum + 1)) + minimum);
 }

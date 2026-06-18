@@ -2,8 +2,8 @@ import checkNumber from './check-number.ts';
 
 /**
  Converts a decimal number to a bijective base-26 string.
- 
- @param number
+
+ @param number - Decimal number
  */
 export default function toBb26(number: number): string {
 	checkNumber(number);
@@ -11,7 +11,12 @@ export default function toBb26(number: number): string {
 	let string = '';
 
 	while (number > 0) {
-		string = decimalToCharacter(number % 26 || 26) + string;
+		let digit = number % 26;
+		if (digit === 0) {
+			digit = 26;
+		}
+
+		string = decimalToCharacter(digit) + string;
 		number = Math.floor((number - 1) / 26);
 	}
 

@@ -35,5 +35,6 @@ void suite('toBb26', () => {
 		assert.throws(() => toBb26(0), RangeError);
 		assert.throws(() => toBb26(NaN), RangeError);
 		assert.throws(() => toBb26(1.5), RangeError);
+		assert.throws(() => toBb26(Number.MAX_SAFE_INTEGER + 1), RangeError);
 	});
 });

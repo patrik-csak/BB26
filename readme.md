@@ -8,7 +8,7 @@ You’re probably familiar with BB26 numeration. It’s used for spreadsheet col
 
 Here’s an example of decimal (base-10) numbers (the numbers you use every day to count things) compared to their corresponding BB26 numbers:
 
-```
+```text
 Decimal: | 1 | 2 | 3 | … | 24 | 25 | 26 | 27 | 28 | 29 | …
    BB26: | A | B | C | … |  X |  Y |  Z | AA | AB | AC | …
 ```
