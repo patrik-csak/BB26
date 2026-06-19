@@ -10,8 +10,6 @@ export default function checkString(input: unknown): asserts input is string {
 	}
 
 	if (!allowedStringPattern.test(input)) {
-		throw new RangeError(
-			`Expected non-empty uppercase-only string, got \`${input}\``,
-		);
+		throw new RangeError(`Expected non-empty uppercase-only string, got \`${input}\``);
 	}
 }

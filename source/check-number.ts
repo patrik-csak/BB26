@@ -8,8 +8,6 @@ export default function checkNumber(input: unknown): asserts input is number {
 	}
 
 	if (!Number.isSafeInteger(input) || input < 1) {
-		throw new RangeError(
-			`Expected number to be a positive safe integer, got \`${input}\``,
-		);
+		throw new RangeError(`Expected number to be a positive safe integer, got \`${input}\``);
 	}
 }

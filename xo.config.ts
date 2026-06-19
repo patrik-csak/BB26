@@ -9,10 +9,6 @@ const config: FlatXoConfig = [
 		ignores: ['distribution/', 'package-lock.json'],
 	},
 
-	{
-		prettier: 'compat',
-	},
-
 	e18e.configs.recommended,
 	packageJson.configs.recommended,
 	packageJson.configs.stylistic,
