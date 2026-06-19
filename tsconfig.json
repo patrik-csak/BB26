@@ -9,11 +9,6 @@
 		"incremental": true,
 		"stripInternal": true,
 
-		// more strictness
-		"forceConsistentCasingInFileNames": true,
-		"noEmitOnError": true,
-		"useDefineForClassFields": true,
-
 		// https://nodejs.org/docs/latest-v24.x/api/typescript.html#type-stripping
 		"erasableSyntaxOnly": true,
 		"rewriteRelativeImportExtensions": true,
