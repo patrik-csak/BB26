@@ -1,4 +1,4 @@
-import checkString from './check-string.ts';
+import validateString from './validate-string.ts';
 import toBb26 from './to-bb26.ts';
 import toDecimal from './to-decimal.ts';
 
@@ -26,7 +26,7 @@ export default function range(start: string, end?: string): string[] {
 	}
 
 	for (const string of [start, end]) {
-		checkString(string);
+		validateString(string);
 	}
 
 	const array: string[] = [];

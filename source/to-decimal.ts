@@ -1,4 +1,4 @@
-import checkString from './check-string.ts';
+import validateString from './validate-string.ts';
 
 /**
  Converts a bijective base-26 string to a decimal number.
@@ -6,7 +6,7 @@ import checkString from './check-string.ts';
  @param string - Bijective base-26 string
  */
 export default function toDecimal(string: string): number {
-	checkString(string);
+	validateString(string);
 
 	let number = 0;
 

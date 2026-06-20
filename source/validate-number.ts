@@ -2,7 +2,7 @@
  Validate number input
  @internal
  */
-export default function checkNumber(input: unknown): asserts input is number {
+export default function validateNumber(input: unknown): asserts input is number {
 	if (typeof input !== 'number') {
 		throw new TypeError(`Expected number, got \`${String(input)}\``);
 	}

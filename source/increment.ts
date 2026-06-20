@@ -1,4 +1,4 @@
-import checkString from './check-string.ts';
+import validateString from './validate-string.ts';
 import toBb26 from './to-bb26.ts';
 import toDecimal from './to-decimal.ts';
 
@@ -8,7 +8,7 @@ import toDecimal from './to-decimal.ts';
  @returns Incremented string
  */
 export default function increment(string: string): string {
-	checkString(string);
+	validateString(string);
 
 	return toBb26(toDecimal(string) + 1);
 }

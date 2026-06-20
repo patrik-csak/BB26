@@ -4,7 +4,7 @@ const allowedStringPattern = /^[A-Z]+$/v;
  Validate string input
  @internal
  */
-export default function checkString(input: unknown): asserts input is string {
+export default function validateString(input: unknown): asserts input is string {
 	if (typeof input !== 'string') {
 		throw new TypeError(`Expected string, got \`${String(input)}\``);
 	}
