@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/patrik-csak/BB26/compare/v5.2.0...HEAD)
+## [5.2.1](https://github.com/patrik-csak/BB26/compare/v5.2.0...v5.2.1) – 2026-06-20
 
 ### Changed
 
@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Throw if `toBb26` is passed an unsafe integer
 
-## [v5.2.0](https://github.com/patrik-csak/BB26/compare/v5.1.1...v5.2.0) – 2026-04-30
+## [5.2.0](https://github.com/patrik-csak/BB26/compare/v5.1.1...v5.2.0) – 2026-04-30
 
 - Improve `range` performance
 
