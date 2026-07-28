@@ -2,21 +2,9 @@
   "name": "bb26",
   "version": "5.2.1",
   "description": "Bijective base-26 utility library",
-  "keywords": [
-    "base 26",
-    "bijective base 26",
-    "spreadsheet",
-    "spreadsheet column",
-    "spreadsheet column letters",
-    "license plate serials"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/patrik-csak/BB26.git"
-  },
   "license": "MIT",
+  "repository": "github:patrik-csak/BB26",
   "author": "Patrik Csak <p@trikcsak.com> (https://patrikcsak.com)",
-  "sideEffects": false,
   "type": "module",
   "exports": {
     ".": {
@@ -24,9 +12,17 @@
       "default": "./distribution/index.js"
     }
   },
-  "files": [
-    "distribution"
-  ],
+  "sideEffects": false,
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24"
+    },
+    "packageManager": {
+      "name": "npm",
+      "version": "^11.16"
+    }
+  },
   "scripts": {
     "prebuild": "rm -fr distribution",
     "build": "tsc --project tsconfig.build.json",
@@ -39,6 +35,17 @@
     "test:coverage": "npm run test -- --experimental-test-coverage",
     "types:check": "tsc --noEmit"
   },
+  "files": [
+    "distribution"
+  ],
+  "keywords": [
+    "base 26",
+    "bijective base 26",
+    "spreadsheet",
+    "spreadsheet column",
+    "spreadsheet column letters",
+    "license plate serials"
+  ],
   "devDependencies": {
     "@tsconfig/node-ts": "^23.6.4",
     "@tsconfig/strictest": "^2.0.8",
@@ -47,16 +54,6 @@
     "eslint-config-xo": "^0.58.1",
     "knip": "^6.4.1",
     "typescript": "^6.0.3"
-  },
-  "devEngines": {
-    "runtime": {
-      "name": "node",
-      "version": "^24"
-    },
-    "packageManager": {
-      "name": "npm",
-      "version": "^11.16"
-    }
   },
   "allowScripts": {
     "unrs-resolver": false
