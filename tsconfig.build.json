@@ -1,0 +1,11 @@
+{
+	"extends": "./tsconfig.json",
+	"include": ["source"],
+	"compilerOptions": {
+		"declaration": true,
+		"outDir": "distribution",
+		"rootDir": "source",
+		"stripInternal": true,
+		"types": []
+	}
+}

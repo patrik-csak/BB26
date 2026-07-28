@@ -28,8 +28,8 @@
     "distribution"
   ],
   "scripts": {
-    "prebuild": "rm -fr distribution tsconfig.tsbuildinfo",
-    "build": "tsc",
+    "prebuild": "rm -fr distribution",
+    "build": "tsc --project tsconfig.build.json",
     "lint:check": "eslint",
     "lint:fix": "eslint --fix",
     "prepack": "npm run build",
@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "@e18e/eslint-plugin": "^0.5.1",
+    "@tsconfig/node-ts": "^23.6.4",
     "@tsconfig/strictest": "^2.0.8",
     "@types/node": "^24.13.2",
     "eslint": "^10.5.0",

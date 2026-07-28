@@ -1,17 +1,10 @@
 {
-	"extends": "@tsconfig/strictest",
-	"include": ["source"],
+	"extends": [
+		"@tsconfig/strictest/tsconfig.json",
+		"@tsconfig/node-ts/tsconfig.json"
+	],
+	"include": ["source", "test"],
 	"compilerOptions": {
-		"rootDir": "source",
-		"outDir": "distribution",
-		"types": ["node"],
-		"declaration": true,
-		"incremental": true,
-		"stripInternal": true,
-
-		// https://nodejs.org/docs/latest-v24.x/api/typescript.html#type-stripping
-		"erasableSyntaxOnly": true,
-		"rewriteRelativeImportExtensions": true,
-		"verbatimModuleSyntax": true
+		"types": ["node"]
 	}
 }
