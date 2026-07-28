@@ -5,18 +5,16 @@ import {random, range} from '../source/index.ts';
 void suite('random', () => {
 	void test('returns a valid string given only an upper bound', () => {
 		const validLetters = range('AAA');
+		const randomLetters = Array.from({length: 100_000}, () => random('ZZ'));
 
-		for (let i = 0; i < 100_000; ++i) {
-			assert.equal(validLetters.includes(random('ZZ')), true);
-		}
+		assert.equal(randomLetters.every(letter => validLetters.includes(letter)), true);
 	});
 
 	void test('returns a valid string given both upper and lower bounds', () => {
 		const validLetters = range('AA', 'AAA');
+		const randomLetters = Array.from({length: 100_000}, () => random('AA', 'ZZ'));
 
-		for (let i = 0; i < 100_000; ++i) {
-			assert.equal(validLetters.includes(random('AA', 'ZZ')), true);
-		}
+		assert.equal(randomLetters.every(letter => validLetters.includes(letter)), true);
 	});
 
 	void test('throws TypeError for non-string input', () => {
