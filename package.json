@@ -54,7 +54,7 @@
     "@tsconfig/strictest": "^2.0.8",
     "@types/node": "^24.13.2",
     "eslint": "^10.8.0",
-    "eslint-config-xo": "^0.58.1",
+    "eslint-config-xo": "^2.0.0",
     "knip": "^6.4.1",
     "typescript": "^6.0.3"
   },
