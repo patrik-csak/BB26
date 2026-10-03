@@ -23,7 +23,7 @@
     },
     "packageManager": {
       "name": "npm",
-      "version": "^11.16"
+      "version": "11.16 - 12"
     }
   },
   "scripts": {
