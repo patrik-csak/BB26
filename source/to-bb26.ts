@@ -1,10 +1,10 @@
 import validateNumber from './validate-number.ts';
 
 /**
- Converts a decimal number to a bijective base-26 string.
+Converts a decimal number to a bijective base-26 string.
 
- @param number - Decimal number
- */
+@param number - Decimal number
+*/
 export default function toBb26(number: number): string {
 	validateNumber(number);
 

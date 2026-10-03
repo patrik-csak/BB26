@@ -1,10 +1,10 @@
 import validateString from './validate-string.ts';
 
 /**
- Converts a bijective base-26 string to a decimal number.
+Converts a bijective base-26 string to a decimal number.
 
- @param string - Bijective base-26 string
- */
+@param string - Bijective base-26 string
+*/
 export default function toDecimal(string: string): number {
 	validateString(string);
 
