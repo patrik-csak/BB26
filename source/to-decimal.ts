@@ -10,10 +10,10 @@ export default function toDecimal(string: string): number {
 
 	let number = 0;
 
-	for (let i = 0; i < string.length; i++) {
-		const char = string[string.length - i - 1]!;
+	for (let index = 0; index < string.length; index++) {
+		const char = string[string.length - index - 1]!;
 
-		number += (26 ** i) * characterToDecimal(char);
+		number += (26 ** index) * characterToDecimal(char);
 	}
 
 	return number;
