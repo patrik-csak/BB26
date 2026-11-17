@@ -29,14 +29,10 @@
   "scripts": {
     "prebuild": "rm -fr distribution",
     "build": "tsc --project tsconfig.build.json",
-    "lint:check": "eslint",
-    "lint:fix": "eslint --fix",
+    "lint": "tsc --noEmit && eslint && knip",
     "prepack": "npm run build",
-    "quality:check": "npm run types:check && npm run lint:check && knip",
-    "quality:fix": "npm run lint:fix",
     "test": "node --test",
-    "test:coverage": "npm run test -- --experimental-test-coverage",
-    "types:check": "tsc --noEmit"
+    "test:coverage": "npm run test -- --experimental-test-coverage"
   },
   "files": [
     "distribution"
